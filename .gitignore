@@ -1,0 +1,57 @@
+# Draft for a NEW, reviewed upload folder. Does not sanitize tracked files.
+
+node_modules/
+.npm/
+dist/
+backups/
+patches/
+generated-images/
+.workbuddy/
+.wbapp_*
+*.genie
+.file-fingerprints.json
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Internal notes and source artwork: review before selectively publishing
+docs/
+src/assets/raw/
+
+# Temporary screenshots and tool outputs
+tools/shots/
+tools/_out/
+tools/_capy_shots/
+tools/_hop_seq.png
+tests/_realtest_shot.png
+tests/_test_*.png
+src/assets/_realtest_shot.png
+src/assets/_test_*.png
+
+# Editor, OS and temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+*.orig
+*.swp
+*.swo
+*~
+_tmp*
+.tmp/
+tmp/
+.temp/
+*.pid
+*.zip
+
+# Keep package-lock.json tracked for reproducible npm ci.
+# Do not ignore required game assets merely to hide an authorization issue.

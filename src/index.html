@@ -1,0 +1,3092 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>第十一单外卖</title>
+<!-- 图标 = 袋鼠贴图，内联成 base64（这样单文件版也有图标，不依赖外部文件）-->
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+  /* ============================================================
+   * 配色：美团外卖（黄 + 黑 + 橙）
+   *   --mt-yellow  #FFD100  主色
+   *   --mt-ink     #1A1A1A  深色
+   *   --mt-orange  #FF6B00  强调
+   * 风格保持像素/街机感：硬边框、无圆角柔光、方正块面。
+   * ============================================================ */
+  :root {
+    --mt-yellow: #FFD100;
+    --mt-yellow-d: #E0A800;
+    --mt-ink: #1A1A1A;
+    --mt-orange: #FF6B00;
+    --panel-bg: #1f1f24;
+    /* ★ 软键盘遮挡量（2026-10-07 十一反馈④）
+     * ⚠️ **必须在这里给个默认 0px** —— `calc()` 里用了 `var(--kb-inset)`，
+     *   而 CSS 规则是"只要有一个 var 未定义 ⇒ **整条 calc 失效** ⇒
+     *   `bottom` 退回 auto ⇒ 按钮跑到屏幕顶部"（不是"少加一点"那么温和）。
+     *   JS 会把真实键盘高度写到 #touchpad 上覆盖它。 */
+    --kb-inset: 0px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 100%; height: 100%;
+    background: #0e0e11;
+    display: flex; align-items: center; justify-content: center;
+    font-family: ui-monospace, Consolas, "Microsoft YaHei", monospace;
+    overflow: hidden;
+    -webkit-user-select: none; user-select: none;
+  }
+  #wrap {
+    position: relative;
+    width: 100%; height: 100%;
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px;
+  }
+  canvas {
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    border: 3px solid #33333a;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+    max-width: 100%;
+    max-height: 100%;
+    /* ⚠️ canvas 必须用 content-box：
+     * 全局是 border-box，那样 style.width 会**含 3px 边框**，
+     * 导致画面内容被边框挤压，显示区不再是严格的 16:9
+     * （实测 658x360，应该是 640x360，画面轻微变形）。
+     * 改成 content-box 后，style.width 就是纯画面宽度，比例精准。 */
+    box-sizing: content-box;
+  }
+
+  /* ============================================================
+   * UI 浮层
+   * 真正的 HTML 元素盖在 canvas 上 —— 这样按钮能直接点、
+   * 输入框能粘贴、复制能调用浏览器剪贴板，
+   * 不用在 canvas 里自己算鼠标坐标（那样又脆又难维护）。
+   * ============================================================ */
+  #ui {
+    position: absolute;
+    inset: 0;
+    display: none;              /* 由 JS 控制显隐 */
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;       /* 只让子元素接收点击 */
+  }
+  #ui.on { display: flex; }
+
+  .panel {
+    pointer-events: auto;
+    width: min(580px, 90vw);
+    max-height: 92vh;
+    overflow-y: auto;
+    background: var(--panel-bg);
+    /* 像素风：双层硬边框，做出"街机面板"的层次 */
+    border: 3px solid #3a3a42;
+    box-shadow: 0 0 0 3px #0e0e11, 0 16px 50px rgba(0,0,0,0.75);
+    padding: 24px 26px 20px;
+  }
+
+  /* ============================================================
+   * ★ 面板角落按钮条（2026-10-06 新增）★
+   * ============================================================
+   * 十一的要求（原话）：
+   *   "点开那个选择路线那个返回键，我想设在它这个黑框的左上角，
+   *    而不是设在下面，不然每次大家要返回的时候，
+   *    还要往下翻到最底下。"
+   *   "不要放到整个页面左上角，只是那个黑框的左上角。"
+   *
+   * 用 sticky 而不是 absolute：
+   *   · absolute 会跟着内容一起滚走（长列表滚下去就看不见了）
+   *   · sticky 会**一直吸在黑框顶部**，无论滚到哪都够得着 ——
+   *     这正是"不用往下翻"要的效果
+   *
+   * ⚠️ 负 margin 是为了把它抵到 .panel 的 padding 外沿，
+   *    视觉上真正贴住黑框的内边框（否则会离边框 24px 显得空）。
+   *    同步用 `top: 0` 吸顶、`z-index` 压在卡片之上。
+   * ============================================================ */
+  .panel-corner {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    /* ⚠️ 这里原来用了负 margin（-24px -26px）想把按钮抵到黑框内沿，
+     *    但 sticky + 负 margin 会让它的"占位高度"算错 ——
+     *    实测结果：下面的 h1 被它压住了（h1.top=100 < corner.bottom=114）。
+     *    ⇒ 改成正常的 margin，用 padding 控制内边距。
+     *      代价是按钮离黑框内沿有 24px 间距，但**内容不再被遮**，这才是对的。 */
+    margin: 0 0 10px;
+    padding: 4px 2px 8px;
+    /* 背景要跟面板同色，否则滚动时下面的卡片会透出来 */
+    background: var(--panel-bg);
+    border-bottom: 2px solid #26262e;
+  }
+  .panel-corner-btns {
+    display: flex;
+    gap: 6px;
+    flex: 0 0 auto;
+  }
+  .panel-corner .btn.small {
+    margin: 0;
+    padding: 7px 12px;
+    font-size: 12px;
+  }
+  /* 右上角的小标签（"选择路线"）
+   * ⚠️ 原来它是单独一行的 brandBar，被吸顶的按钮条压住了 14px
+   *    （实测 corner.bottom=114 / brand.top=100 → 重叠）。
+   *    并到同一行右侧之后就没有遮挡了。 */
+  .panel-corner-brand {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--mt-yellow);
+    opacity: 0.85;
+    flex: 0 0 auto;
+    padding-right: 2px;
+  }
+
+  /* ============================================================
+   * ★ 主菜单：一屏内完整呈现，不许滚动 ★
+   * ============================================================
+   * 十一的要求：
+   *   "初始页面禁止出现下滑或滚动，需在常见屏幕尺寸下一屏完整呈现。"
+   *   "『开始跑单／选择路线』界面需一屏内完整呈现，
+   *    所有内容无需滚动即可查看与操作，并合理布局以适配常见屏幕尺寸。"
+   *
+   * 做法：
+   *   ① 去掉 max-height / overflow，改成"内容自适应 + 绝不滚动"
+   *   ② 用 clamp() 让字号和间距随视口高度收缩 —— 屏幕矮就整体收紧，
+   *      而不是"挤不下就出滚动条"
+   *   ③ 主菜单最多 5 个按钮 + 一行进度 + 一行信息，纵向留白刻意压小
+   *   ④ 配 .panel.compact 的矮屏媒体查询，进一步压缩（见文件末尾）
+   *
+   * ⚠️ 不要把 overflow-y:auto 加回来 —— 那就等于放弃了"一屏呈现"。
+   *    如果以后主菜单又加按钮，请优先考虑"收纳进设置/其他模式"，
+   *    而不是让它变成可滚动列表。
+   * ============================================================ */
+  .panel.no-scroll {
+    max-height: none;
+    overflow: visible;
+  }
+  /* 主菜单专用：紧凑纵向节奏
+   * ============================================================
+   * ★ 2026-10-06 改：恢复黑框后，"顶部留白"要从 padding 改成 margin ★
+   * ============================================================
+   * 【为什么必须改】
+   *   之前面板是**透明**的，所以用 `padding-top: 150~220px`
+   *   在面板内部留一块空白、把按钮往下推，好让 canvas 大标题露出来。
+   *   留白在透明面板里看不见，没问题。
+   *
+   *   现在面板恢复成**黑框**了 —— 同一块 padding 就变成了
+   *   黑框里的一大片空洞（实测 272~323px 高），看着像个大黑洞。
+   *
+   * ⇒ 所以：
+   *     · `padding-top` 收回到和其它边一样的正常值（黑框只包住按钮组）
+   *     · 改用 `margin-top` 把**整块黑框往下推**，同样避开 canvas 标题，
+   *       但因为是"面板外部的间距"，不会变成框里的空白
+   *
+   * 【为什么用 margin-top 而不是 top】
+   *   #ui 是 flex 容器（align-items:center），面板靠 flex 居中。
+   *   给它一个 margin-top 就能在纵向偏下，且不需要动定位方式。
+   */
+  .panel.menu-fit {
+    padding: clamp(12px, 1.8vh, 20px) clamp(14px, 2.2vw, 22px);
+    /* ★ 把黑框整体下推，给 canvas 的品牌栏 + 大标题 + 副标题让出位置。
+     *  值是按"canvas 标题底 ≈ y188、面板顶要落在它下面"反推的。 */
+    margin-top: clamp(120px, 24vh, 200px);
+    width: min(520px, 90vw);
+  }
+  .panel.menu-fit .brand { margin-bottom: clamp(4px, 1vh, 12px); }
+  .panel.menu-fit h1 {
+    font-size: clamp(20px, 3.4vh, 26px);
+    margin-bottom: 2px;
+  }
+  .panel.menu-fit .sub {
+    font-size: clamp(11px, 1.6vh, 13px);
+    margin-bottom: clamp(8px, 1.6vh, 16px);
+  }
+  .panel.menu-fit .btn {
+    padding: clamp(9px, 1.7vh, 14px) 16px;
+    margin-bottom: clamp(6px, 1.1vh, 10px);
+    font-size: clamp(14px, 2.1vh, 16px);
+  }
+  .panel.menu-fit .btn .desc { font-size: clamp(10px, 1.4vh, 12px); }
+  .panel.menu-fit .progress-line { margin-top: clamp(6px, 1.2vh, 12px); }
+  .panel.menu-fit .menu-info { margin-top: 3px; }
+
+  /* ============================================================
+   * ★ 模式选择器（经典 / 骑手）（2026-10-06 第 2 期）★
+   * ============================================================
+   * 主菜单最上面的一行紧凑分段选择器。
+   * 设计取舍：做得**比按钮轻**（小、矮、无厚底边），
+   * 因为它不是主操作 —— 主操作永远只有「开始跑单」一个。
+   *
+   * ⚠️ 高度要控制住：主菜单是一屏呈现（不许滚动），
+   *    这一行加上去会让面板变高，所以字小、间距紧。 */
+  .mode-pick {
+    display: flex; flex-direction: column;
+    align-items: center; gap: clamp(4px, 0.7vh, 7px);
+    margin-bottom: clamp(8px, 1.4vh, 14px);
+  }
+  .mode-pick .mode-label {
+    font-size: clamp(10px, 1.3vh, 12px);
+    letter-spacing: 3px;
+    color: rgba(200,196,180,0.55);
+  }
+  .mode-pick .mode-row { display: flex; gap: 8px; }
+  /* 分段按钮：没选中的是"暗片"，选中的是"亮片"（美团黄） */
+  .mode-seg {
+    padding: clamp(5px, 0.9vh, 8px) clamp(14px, 2.2vw, 22px);
+    font-size: clamp(12px, 1.7vh, 14px);
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: rgba(20,20,25,0.72);
+    border: 2px solid #3a3a42;
+    border-bottom-width: 3px;
+    color: rgba(200,196,180,0.62);
+    transition: background .12s, color .12s, border-color .12s;
+    user-select: none;
+  }
+  .mode-seg:hover { border-color: #5a5a66; color: rgba(220,216,200,0.85); }
+  .mode-seg.on {
+    background: var(--mt-yellow);
+    border-color: var(--mt-yellow-d, #c9a400);
+    color: #1a1a1a;
+  }
+  .mode-pick .mode-hint {
+    font-size: clamp(10px, 1.3vh, 12px);
+    color: rgba(200,196,180,0.5);
+    text-align: center;
+  }
+  .panel h1 {
+    font-size: 23px; font-weight: 800; color: var(--mt-yellow);
+    text-align: center; margin-bottom: 4px; letter-spacing: 1px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.6);
+  }
+  .panel .sub {
+    font-size: 13px; color: rgba(220,214,190,0.68);
+    text-align: center; margin-bottom: 18px; line-height: 1.6;
+  }
+
+  /* 大按钮：像素/街机按钮感 —— 硬边 + 底部厚边（像被按下去的实体键） */
+  .btn {
+    display: block; width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: #2a2a31;
+    border: 3px solid #43434d;
+    border-bottom-width: 5px;
+    color: #e8e4d8;
+    font-size: 16px; font-weight: 700;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: background .1s, border-color .1s, transform .05s;
+  }
+  .btn:hover {
+    background: rgba(255,209,0,0.14);
+    border-color: var(--mt-yellow);
+    color: var(--mt-yellow);
+  }
+  .btn:active {
+    transform: translateY(2px);
+    border-bottom-width: 3px;
+  }
+  .btn .desc {
+    display: block;
+    font-size: 12px; font-weight: 400;
+    color: rgba(200,196,180,0.55);
+    margin-top: 3px;
+  }
+  .btn:hover .desc { color: rgba(255,209,0,0.6); }
+
+  /* 主按钮：美团黄 */
+  .btn.primary {
+    background: var(--mt-yellow);
+    border-color: #ffe066;
+    border-bottom-color: var(--mt-yellow-d);
+    color: var(--mt-ink);
+  }
+  .btn.primary .desc { color: rgba(26,26,26,0.62); }
+  .btn.primary:hover {
+    background: #ffe066;
+    border-color: #fff3b0;
+    color: var(--mt-ink);
+  }
+
+  .btn.small {
+    display: inline-block; width: auto;
+    padding: 9px 15px; font-size: 13px;
+    margin: 0 6px 0 0; text-align: center;
+  }
+
+  /* ============================================================
+   * ★ 左上角返回按钮（2026-10-06 十一要求）★
+   * ============================================================
+   * 十一："设置页面中的返回放在左上角。"
+   *
+   * 【为什么用 sticky 而不是 absolute/fixed】
+   *   · `absolute`：面板是滚动容器（overflow-y: auto），
+   *     absolute 会跟着内容一起滚走 —— 滚到设置页底部就看不见返回了。
+   *   · `fixed`：那是相对**视口**定位，会跑到面板外面去（面板是居中的）。
+   *   · `sticky`：相对**滚动容器**固定 —— 正好是我们要的：
+   *     **不管滚到哪，它都贴在面板左上角**。
+   *
+   * ⚠️ sticky 必须配 `top` 才生效。
+   * ⚠️ 它得是面板里的**第一个**子元素，否则 sticky 的起始位置不对。
+   *    （.panel 是块级滚动容器，不是 flex 容器，
+   *      所以 `inline-block` + `sticky` 就够了，不需要 align-self）
+   * ============================================================ */
+  .btn.corner-back {
+    position: sticky; top: 0;
+    display: inline-block; width: auto;
+    padding: 7px 13px; font-size: 13px;
+    margin: -6px 0 4px;
+    z-index: 5;
+    opacity: 0.85;
+  }
+  .btn.corner-back:hover { opacity: 1; }
+
+  .row { display: flex; gap: 8px; margin-top: 6px; }
+  .row .btn { margin-bottom: 0; }
+
+  /* ============================================================
+   * ★ 👤 账号系统（2026-10-06 十一要求）★
+   * ============================================================
+   * 风格沿用现有面板：深底 + 美团黄 + 圆角。
+   * 唯一的"新颜色"是危险色（删除账号）和状态色（对/错提示）。
+   */
+  .acc-form { margin: 10px 0 14px; }
+
+  .acc-label {
+    font-size: 12px; color: rgba(255,255,255,0.55);
+    margin: 12px 0 5px; letter-spacing: 0.04em;
+  }
+
+  .acc-input {
+    display: block; width: 100%; box-sizing: border-box;
+    padding: 11px 13px; font-size: 15px;
+    font-family: inherit;
+    color: #fff; background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 10px; outline: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .acc-input::placeholder { color: rgba(255,255,255,0.3); }
+  .acc-input:focus {
+    border-color: rgba(255,209,0,0.7);
+    background: rgba(255,209,0,0.06);
+  }
+
+  /* 即时提示（昵称能不能用） */
+  .acc-hint { font-size: 12px; margin-top: 5px; min-height: 16px; color: transparent; }
+  .acc-hint.good { color: #6fd48a; }
+  .acc-hint.bad  { color: #ff8a8a; }
+
+  /* 错误条：没内容时不占视觉重量 */
+  .acc-error {
+    font-size: 13px; margin-top: 10px; min-height: 0;
+    color: #ff8a8a; line-height: 1.5;
+  }
+  .acc-error.on {
+    min-height: 18px;
+    padding: 8px 11px; border-radius: 8px;
+    background: rgba(255,80,80,0.12);
+    border-left: 3px solid rgba(255,100,100,0.8);
+  }
+
+  /* ---- 账号列表 ---- */
+  .acc-list { margin: 8px 0 12px; }
+
+  .acc-card {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 14px; margin-bottom: 8px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px; cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+  }
+  .acc-card:hover {
+    background: rgba(255,209,0,0.10);
+    border-color: rgba(255,209,0,0.5);
+  }
+  .acc-card:active { transform: scale(0.985); }
+
+  .acc-avatar {
+    width: 42px; height: 42px; flex: 0 0 42px;
+    border-radius: 50%;
+    background: rgba(255,209,0,0.16);
+    color: var(--mt-yellow);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 17px; font-weight: 500;
+  }
+  .acc-avatar.big { width: 62px; height: 62px; flex-basis: 62px; font-size: 25px; }
+
+  .acc-info { flex: 1; min-width: 0; }
+  .acc-name {
+    font-size: 15px; color: #fff;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .acc-name.big { font-size: 19px; text-align: center; margin-top: 8px; }
+  .acc-meta { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+  .acc-go { color: rgba(255,255,255,0.3); font-size: 20px; }
+
+  /* ---- 账号卡上的「删除」按钮（2026-10-07 新增）----
+   * 设计取舍：
+   *   · 平时**低调**（半透明灰）—— 它是危险操作，不该抢"点击进入"的注意力
+   *   · 悬停才变红 —— 让玩家在真要点它时才意识到"这是删除"
+   *   · 比 .acc-go 略小、自己单独占一块，避免误触到整张卡 */
+  .acc-del {
+    flex: 0 0 auto;
+    margin-left: 4px; padding: 6px 12px;
+    font-size: 12px; font-family: inherit;
+    color: rgba(255,255,255,0.38);
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.16);
+    border-radius: 999px;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .acc-del:hover {
+    color: #ffb3b3;
+    border-color: rgba(255,100,100,0.6);
+    background: rgba(255,80,80,0.12);
+  }
+  .acc-del:active { transform: scale(0.94); }
+
+  .acc-login-head { margin: 14px 0 4px; display: flex; flex-direction: column; align-items: center; }
+
+  /* ---- 作者徽章（2026-10-07）----
+   * 样式和普通「已登录」徽章拉开：金色 + 描边，一眼看出不一样。 */
+  .set-badge.author-badge {
+    color: #1a1a1a;
+    background: linear-gradient(135deg, #ffd93b, #f7c948);
+    border: 1px solid rgba(0,0,0,0.18);
+    font-weight: 600;
+  }
+
+  /* ---- 兑换码输入框（2026-10-07）---- */
+  .redeem-input {
+    flex: 1; min-width: 0;
+    letter-spacing: 1px;
+  }
+  .acc-hint.ok  { color: #8fe08f; }
+  .acc-hint.bad { color: #ffb3b3; }
+
+  .acc-forgot {
+    font-size: 12px; line-height: 1.6;
+    color: rgba(255,255,255,0.42);
+    margin-top: 14px; padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* ---- 删除账号的警告块 ---- */
+  .acc-warn {
+    padding: 12px 14px; margin: 10px 0 4px;
+    background: rgba(255,80,80,0.10);
+    border: 1px solid rgba(255,100,100,0.35);
+    border-radius: 10px;
+    font-size: 14px; color: #ffb3b3; line-height: 1.5;
+  }
+  .acc-warn-sub {
+    font-size: 12px; color: rgba(255,160,160,0.75);
+    margin-top: 6px; line-height: 1.6;
+  }
+
+  /* ---- 设置页里的账号状态徽章 ---- */
+  .set-badge {
+    font-size: 11px; padding: 3px 9px; border-radius: 999px;
+    background: rgba(110,212,138,0.16); color: #6fd48a;
+    flex: 0 0 auto;
+  }
+  .set-badge.warn {
+    background: rgba(255,170,80,0.16); color: #ffb060;
+  }
+
+  /* ============================================================
+   * ★ 「角色库」入口（2026-10-06 十一要求：入口明显易用）★
+   * ============================================================
+   * 选骑手页顶部只显示"最常用的 4 个"，其余角色要去角色库找。
+   * 这个入口必须**明显**，否则玩家会以为"我就只有 4 个骑手"。
+   *
+   * 视觉设计：
+   *   · 用**虚线框** + 略微透明的底 → 一眼看出它是"入口/更多"，
+   *     而不是又一个主按钮（主按钮是「开始跑单」的实心黄）
+   *   · 宽度撑满、居中对齐 → 和上方的卡片区形成"结论"感
+   *   · 箭头 → 暗示"点进去还有内容"
+   * ============================================================ */
+  .pk-lib-row {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+  }
+  .btn.lib-entry {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    background: rgba(255,209,0,0.07);
+    border: 2px dashed rgba(255,209,0,0.5);
+    border-bottom-color: rgba(255,209,0,0.5);
+    color: var(--mt-yellow);
+  }
+  .btn.lib-entry .desc {
+    color: rgba(210,204,180,0.8);
+    font-size: 12px;
+  }
+  .btn.lib-entry:hover {
+    background: rgba(255,209,0,0.14);
+    border-color: var(--mt-yellow);
+    color: #ffe066;
+  }
+  .btn.lib-entry:hover .desc { color: rgba(230,224,200,0.95); }
+
+  /* 房间码展示 —— 做成"取餐号"牌子的感觉 */
+  .code-box {
+    text-align: center;
+    padding: 16px;
+    margin: 6px 0 14px;
+    background: #14141a;
+    border: 3px dashed rgba(255,209,0,0.5);
+  }
+  .code-text {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 40px; font-weight: 800;
+    letter-spacing: 9px; color: var(--mt-yellow);
+    text-indent: 9px;   /* 抵消最后一个字的 letter-spacing，视觉居中 */
+    user-select: text;
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+  }
+  .code-hint { font-size: 12px; color: rgba(200,196,180,0.6); margin-top: 6px; }
+
+  /* 输入框 */
+  .input {
+    width: 100%;
+    padding: 15px 16px;
+    background: #12121a;
+    border: 3px solid #43434d;
+    color: var(--mt-yellow);
+    font-size: 28px; font-weight: 800;
+    font-family: ui-monospace, Consolas, monospace;
+    letter-spacing: 10px; text-align: center;
+    outline: none;
+    text-transform: uppercase;
+    transition: border-color .1s;
+  }
+  .input:focus { border-color: var(--mt-yellow); }
+  .input::placeholder { color: rgba(255,255,255,0.14); letter-spacing: 10px; }
+
+  .msg {
+    font-size: 13px; text-align: center;
+    min-height: 19px; margin: 10px 0 2px; line-height: 1.5;
+  }
+  .msg.err { color: #ff8a8a; }
+  .msg.ok { color: #9dffb8; }
+  .msg.info { color: var(--mt-yellow); }
+
+  /* 加载动画 */
+  .spinner {
+    width: 32px; height: 32px; margin: 10px auto 14px;
+    border: 4px solid rgba(255,255,255,0.12);
+    border-top-color: var(--mt-yellow);
+    border-radius: 50%;
+    animation: spin 0.85s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* 角色选择 */
+  .chars { display: flex; gap: 12px; margin-bottom: 14px; }
+  .char {
+    flex: 1;
+    padding: 14px 10px;
+    background: #26262c;
+    border: 3px solid #43434d;
+    cursor: pointer;
+    text-align: center;
+    transition: background .1s, border-color .1s, transform .05s;
+  }
+  .char:hover { transform: translateY(-2px); }
+  .char:active { transform: translateY(0); }
+
+  /* ============================================================
+   * ★ 选中态（2026-10-06 改成"通用"）★
+   * ============================================================
+   * ⚠️⚠️ 这里原来是这样写的：
+   *     .char[data-role="kangaroo"].selected { ...黄... }
+   *     .char[data-role="dragon"].selected   { ...橙... }
+   *   **只有两个角色有样式** —— 加了卡皮巴拉之后，
+   *   它能被选中（JS 逻辑正常）但**没有任何高亮**，
+   *   玩家看起来就是"点了卡皮巴拉没反应"。十一就是这么发现的。
+   *
+   * ⇒ 改成：基础选中态放在 `.char.selected` 里（谁都适用），
+   *    **角色专属的颜色由 JS 用行内 style 注入**（读 characters.js
+   *    的 accentColor）—— 以后再加角色**不用动 CSS**。
+   *
+   * ⚠️ 为什么颜色不写死在这里：
+   *    写死就得"每加一个角色补一段 CSS"，必然再漏（这次就是漏了）。
+   *    行内 style 的优先级也高于这里的 border-color，能直接覆盖。
+   * ============================================================ */
+  .char.selected {
+    border-width: 3px;
+    transform: translateY(-2px);
+    /* 兜底：万一 JS 没注入颜色，至少边框是亮的（不会"看不出选中"） */
+    border-color: #ffd100;
+    background: rgba(255,209,0,0.14);
+  }
+  .char canvas { display: block; margin: 0 auto 8px; image-rendering: pixelated; }
+  .char .cname { font-size: 15px; font-weight: 700; color: #e8e4d8; }
+  .char .cdesc { font-size: 11px; color: rgba(200,196,180,0.58); margin-top: 3px; }
+
+  /* 键位提示表 */
+  .keys {
+    margin-top: 14px; padding-top: 13px;
+    border-top: 2px solid #33333a;
+    font-size: 12px; color: rgba(200,196,180,0.56);
+    line-height: 1.9;
+  }
+  .keys b { color: #d8d4c4; font-weight: 700; }
+  kbd {
+    display: inline-block;
+    padding: 1px 6px; margin: 0 1px;
+    background: #33333a;
+    border: 2px solid #45454f;
+    font-family: inherit; font-size: 11px;
+  }
+
+  /* ============================================================
+   * 按键说明页
+   * ============================================================
+   * 内容比一个屏幕长，所以面板内部要能滚动：
+   *   .help-box 限高 + overflow-y:auto
+   * 底部"返回"按钮留在滚动区外面，随时能点到。
+   * ============================================================ */
+  .help-title {
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 4px 0 2px;
+  }
+
+  .help-box {
+    max-height: 46vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 12px 0 14px;
+    padding-right: 8px;
+    text-align: left;
+    /* 滚动条也做成像素风 */
+    scrollbar-width: thin;
+    scrollbar-color: #45454f #26262c;
+  }
+  .help-box::-webkit-scrollbar { width: 8px; }
+  .help-box::-webkit-scrollbar-track { background: #26262c; }
+  .help-box::-webkit-scrollbar-thumb {
+    background: #45454f;
+    border: 2px solid #26262c;
+  }
+
+  /* 分节标题 */
+  .help-sec {
+    margin: 16px 0 10px;
+    padding: 7px 10px;
+    background: linear-gradient(90deg, rgba(255,209,0,0.14), transparent);
+    border-left: 4px solid var(--mt-yellow);
+  }
+  .help-sec:first-child { margin-top: 0; }
+  .hs-title { font-size: 13px; font-weight: 700; color: var(--mt-yellow); letter-spacing: 1px; }
+  .hs-sub { font-size: 11px; color: rgba(200,196,180,0.5); margin-top: 3px; }
+
+  /* 一行说明：左图标 + 右文字 */
+  .help-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 9px 8px;
+    margin-bottom: 6px;
+    background: rgba(255,255,255,0.035);
+    border: 2px solid #33333a;
+  }
+  .help-row:hover { border-color: #4a4a56; background: rgba(255,255,255,0.055); }
+
+  .hr-icon {
+    flex: 0 0 auto;
+    width: 56px; height: 56px;
+    image-rendering: pixelated;
+  }
+
+  .hr-body { flex: 1 1 auto; min-width: 0; }
+  .hr-head {
+    display: flex; align-items: baseline; gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+  }
+  .hr-title { font-size: 13px; font-weight: 700; color: #efe9d0; }
+  .hr-keys {
+    font-size: 11px;
+    color: var(--mt-yellow);
+    background: rgba(255,209,0,0.1);
+    padding: 1px 7px;
+    border: 1px solid rgba(255,209,0,0.25);
+    white-space: nowrap;
+  }
+  .hr-desc {
+    font-size: 11.5px;
+    line-height: 1.75;
+    color: rgba(200,196,180,0.78);
+  }
+  .hr-desc b { color: var(--mt-yellow); font-weight: 700; }
+
+  /* ---- 未解锁的动作 ---- */
+  .help-row.locked {
+    background: rgba(255,255,255,0.015);
+    border-color: #2a2a30;
+  }
+  .help-row.locked .hr-title,
+  .help-row.locked .hr-keys { opacity: 0.5; }
+  .help-row.locked .hr-desc { opacity: 0.42; }
+  .hr-locked-tag {
+    font-size: 10px;
+    color: #ffb066;
+    background: rgba(255,107,0,0.12);
+    padding: 1px 6px;
+    border: 1px solid rgba(255,107,0,0.35);
+    white-space: nowrap;
+  }
+
+  /* 冲刺详解区 */
+  .help-dash {    padding: 12px;
+    background: rgba(201,139,255,0.07);
+    border: 2px solid rgba(201,139,255,0.28);
+    text-align: center;
+  }
+  .hd-title {
+    font-size: 13px; font-weight: 700; color: #d9b3ff;
+    margin-bottom: 10px; letter-spacing: 1px;
+  }
+  .hd-steps { text-align: left; margin-bottom: 8px; }
+  .hd-step {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; line-height: 1.6;
+    color: rgba(200,196,180,0.85);
+    padding: 4px 0;
+  }
+  .hd-num {
+    flex: 0 0 auto;
+    display: flex; align-items: center; justify-content: center;
+    width: 18px; height: 18px;
+    background: rgba(201,139,255,0.25);
+    border: 1px solid rgba(201,139,255,0.5);
+    color: #d9b3ff;
+    font-size: 11px; font-weight: 700;
+  }
+  .hd-diagram {
+    width: 168px; height: 168px;
+    margin: 6px auto 4px;
+    display: block;
+  }
+  .hd-note {
+    font-size: 11px; line-height: 1.7;
+    color: rgba(200,196,180,0.68);
+    text-align: left;
+    margin-top: 6px;
+  }
+  .hd-warn {
+    font-size: 11px; line-height: 1.7;
+    color: #ffb066;
+    text-align: left;
+    margin-top: 6px;
+    padding: 6px 8px;
+    background: rgba(255,107,0,0.09);
+    border-left: 3px solid var(--mt-orange);
+  }
+
+  /* ============================================================
+   * 通关结算里的「解锁新动作」提示
+   * ============================================================
+   * 这是逐步解锁系统里最重要的一个反馈时刻 —— 玩家刚通关、
+   * 情绪最高，此时告知"学会了新动作"学习动机最强。
+   * 所以做得比其它提示更醒目：金色渐变块 + 边框 + 图标。
+   * ============================================================ */
+  .unlock-box {
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, rgba(255,209,0,0.16), rgba(255,209,0,0.04));
+    border: 2px solid rgba(255,209,0,0.5);
+  }
+  .ub-head {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--mt-yellow);
+    letter-spacing: 2px;
+    margin-bottom: 7px;
+    text-align: center;
+  }
+  .ub-line {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 4px 0;
+  }
+  .ub-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff3b0;
+  }
+  .ub-keys {
+    font-size: 11px;
+    color: rgba(255,243,176,0.85);
+    background: rgba(0,0,0,0.3);
+    padding: 2px 8px;
+    border: 1px solid rgba(255,209,0,0.35);
+  }
+  .ub-hint {
+    font-size: 11px;
+    line-height: 1.7;
+    color: rgba(200,196,180,0.7);
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px dashed rgba(255,209,0,0.25);
+  }
+
+  /* ============================================================
+   * ★ 启动画面（2026-10-06 新增；同日改为像素风）★
+   * ============================================================
+   * 十一的要求：
+   *   "打开游戏后先展示包含标题『第十一单外卖』及对应背景图的启动画面，
+   *    玩家点击后方进入『开始跑单／选择路线』界面。"
+   *   "封面请统一改成像素风，封面与点击进入后的页面背景保持一致。
+   *    用进入后的那个背景同时作为封面。"
+   *
+   * 所以背景 = **游戏内那套蓝天白云绿山**（ui.js 的 paintSplashBg
+   * 直接复用 render.js 的天空/云/山配色，用像素块重绘），
+   * 封面和主菜单、和关卡内看起来是同一个世界。
+   *
+   * 布局：标题在最上层（z-index 最高、描边最重），
+   *       背景图铺满，底部一行"点击开始"。
+   *
+   * ⚠️ #ui 浮层默认 pointer-events:none，只有 .panel 之类才 auto。
+   *    启动画面整个是可点区域，所以这里显式开 pointer-events:auto。
+   * ============================================================ */
+  #splash {
+    position: absolute;
+    inset: 0;
+    z-index: 100;              /* 最高层：标题永远不会被别的东西盖住 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #8fc4ff;       /* 兜底色 = 游戏内天空色 */
+    pointer-events: auto;
+    cursor: pointer;
+    /* ⚠️ 必须 overflow:hidden —— 启动画面是"一屏呈现"的第一块，
+     *    绝不能出现滚动条。标题动画会轻微上移，
+     *    如果内容刚好卡着视口高度，sub-pixel 取整会让它溢出 1~6px
+     *    （实测 1280×720 溢出 6px → 出现滚动条）。
+     *    直接裁掉，因为所有内容本来就在视口内。 */
+    overflow: hidden;
+  }
+  /* 背景：★ 就是开始页面的那套背景 ★
+   * （ui.js 的 paintSplashBg 直接调 render.js 的 drawSky/drawClouds/drawHills）
+   * ⚠️ canvas 有固有尺寸（1280×720），必须显式铺满，
+   *    否则视口高度刚好 720 时会因为取整误差溢出 6px 出滚动条。
+   *    （这个坑踩过一次，别删这几行 width/height。）*/
+  #splash canvas.splash-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    /* 像素风关键：放大后不要平滑，否则像素块会糊成渐变 */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    object-fit: cover;
+    z-index: 0;
+  }
+  /* 对比层：★ 2026-10-06 减弱 ★
+   *   上一版封面是深色黄昏，所以压了一层很重的暗角。
+   *   现在封面 = 开始页面（明快蓝天），再压重暗角就「不像开始页面」了。
+   *   所以只留一层极淡的暗角，够压住天空亮度、让黄字看得清就行。
+   *   这也正是十一要的"封面和开始页面一致"。 */
+  #splash .splash-cover {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 40%,
+      rgba(10,14,26,0.06) 0%, rgba(10,14,26,0.20) 68%, rgba(10,14,26,0.38) 100%);
+    z-index: 1;
+  }
+  /* 顶部标志：美团袋鼠 + 品牌字样
+   * ★ 2026-10-06 放大：badge 26 → 40 px（十一说"顶上美团专送旁边"，
+   *   意思是要在原来写「美团专送」的那个位置放美团袋鼠，而且要大一点） */
+  #splash .splash-brand {
+    position: relative;
+    z-index: 3;
+    display: flex; align-items: center; gap: 11px;
+    margin-bottom: 6px;
+  }
+  #splash .splash-brand .sb-badge {
+    width: 26px; height: 26px;
+    image-rendering: pixelated;
+    filter: drop-shadow(0 3px 8px rgba(0,0,0,0.55));
+  }
+  #splash .splash-brand .sb-text {
+    font-size: 13px; font-weight: 700; letter-spacing: 3px;
+    color: var(--mt-yellow);
+    text-shadow: 2px 2px 0 rgba(0,0,0,0.55);
+  }
+  /* 大标题 —— 层级最高，永远完整可见。
+   * 像素风做法：不用 CSS 阴影柔化，改用**多层硬边偏移**模拟像素描边，
+   * 再叠一层 8bit 常见的"高光在上、暗边在下"。 */
+  #splash .splash-title {
+    position: relative;
+    z-index: 3;
+    font-size: clamp(38px, 8.2vw, 92px);
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: var(--mt-yellow);
+    /* 像素描边：四向硬边（不用 blur，保持锐利） */
+    text-shadow:
+      4px 4px 0 #1a1a1a,
+      -4px -4px 0 #1a1a1a,
+      4px -4px 0 #1a1a1a,
+      -4px 4px 0 #1a1a1a,
+      0 4px 0 #1a1a1a, 0 -4px 0 #1a1a1a,
+      4px 0 0 #1a1a1a, -4px 0 0 #1a1a1a,
+      0 10px 0 rgba(0,0,0,0.35),
+      0 16px 22px rgba(0,0,0,0.55);
+    image-rendering: pixelated;
+    animation: sp-title 2.6s steps(4, end) infinite;
+  }
+  /* 用 steps() 而不是 ease —— 像素风要"跳格"感的动画，不是平滑浮动 */
+  @keyframes sp-title {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px); }
+  }
+  /* 副标题：不再出现"美团袋鼠 × 奶龙"这类混搭内容（十一第 10 条） */
+  #splash .splash-sub {
+    position: relative;
+    z-index: 3;
+    font-size: clamp(12px, 1.5vw, 16px);
+    color: rgba(255,243,176,0.86);
+    letter-spacing: 3px;
+    margin-top: 8px;
+  }
+  /* ============================================================
+   * 封面上左右两只美团袋鼠（2026-10-06 改）
+   * ============================================================
+   * 十一要求："全都给我改成美团袋鼠……可以给他不同的动作，
+   *           放在那两边，大一点哈。"
+   *
+   * 所以：
+   *   · 两边**都是美团袋鼠**（原来是"左袋鼠 / 右飞龙宝宝"）
+   *   · canvas 从 132 放大到 196
+   *   · 两只给**不同的动作**：左边"原地小跳"、右边"走路晃"
+   *     （靠不同的 keyframes + 不同的 animation-duration/延迟实现）
+   * ============================================================ */
+  #splash .splash-cast {
+    position: absolute;
+    bottom: 11%;
+    left: 0; right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 5%;
+    pointer-events: none;
+  }
+  #splash .splash-cast canvas {
+    image-rendering: pixelated;
+    filter: drop-shadow(0 12px 26px rgba(0,0,0,0.72));
+    /* 放大的画布要显式给 CSS 尺寸，否则会按属性像素（196）显示，
+     * 在小窗口上会太大。clamp 让它跟着视口缩放。 */
+    width: clamp(120px, 15vw, 196px);
+    height: auto;
+  }
+  /* ---- 左边那只：原地小跳（起跳快、落地沉）---- */
+  #splash .sc-left canvas {
+    animation: sp-hop 1.9s cubic-bezier(.3,.7,.4,1) infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes sp-hop {
+    0%, 100% { transform: translateY(0) scaleY(1); }
+    /* 起跳：拉长 + 上移 */
+    18%      { transform: translateY(-26px) scaleY(1.06) scaleX(0.96); }
+    /* 顶点：短暂悬停 */
+    28%      { transform: translateY(-32px) scaleY(1.02) scaleX(0.99); }
+    /* 落地：压扁 */
+    46%      { transform: translateY(0) scaleY(0.90) scaleX(1.07); }
+    58%      { transform: translateY(0) scaleY(1.03) scaleX(0.98); }
+  }
+  /* ---- 右边那只：走路晃（左右换重心 + 轻微起伏）---- */
+  #splash .sc-right canvas {
+    animation: sp-strut 1.55s ease-in-out infinite;
+    transform-origin: 50% 100%;
+  }
+  @keyframes sp-strut {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-9px, -7px) rotate(-3.2deg); }
+    50%      { transform: translate(0, 0) rotate(0deg); }
+    75%      { transform: translate(9px, -7px) rotate(3.2deg); }
+  }
+  /* 底部"点击开始" —— 做成像素风格的小牌子 */
+  #splash .splash-cta {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    padding: 9px 22px;
+    background: rgba(26,26,26,0.72);
+    border: 3px solid var(--mt-yellow);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.45);
+    text-align: center;
+    font-size: clamp(13px, 1.6vw, 17px);
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--mt-yellow);
+    /* 像素风闪烁：steps 让它是"跳着闪"而不是渐隐 */
+    animation: sp-blink 1.2s steps(2, jump-none) infinite;
+    white-space: nowrap;
+  }
+  @keyframes sp-blink {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.42; }
+  }
+  /* 窗口很矮（横屏手机 / 小窗）时收紧留白，保证一屏放得下 */
+  @media (max-height: 460px) {
+    #splash .splash-cast { bottom: 4%; }
+    #splash .splash-cta  { bottom: 3%; }
+    #splash .splash-title { letter-spacing: 3px; }
+  }
+
+  /* ============================================================
+   * ★ E1 气象播报过场（2026-10-06 第 5 期）★
+   * ============================================================
+   * 照 #splash 的写法做一个独立全屏层（过场已经验证可用，不发明第二套）。
+   * 区别：
+   *   · 中间不是"大标题"，而是"一块播报台"（电视屏幕的样子）
+   *   · 文案是正经的气象播报腔 —— 反差就是笑点
+   *
+   * ⚠️ 一切都要**一屏放得下**（和 splash 同样的验收标准），
+   *    所以字号间距都用 clamp() 随视口收缩。
+   * ============================================================ */
+  /* ============================================================
+   * ⚠️⚠️ 全屏浮层的铁律：#ui 是 pointer-events:none，子层必须自己开 auto
+   * ============================================================
+   * `#ui` 设成 `pointer-events: none`，是为了"只在有内容的地方接收点击"，
+   * 让没被面板盖住的画面区域还能被游戏用（比如 canvas 上的交互）。
+   * 但这个 none 会**继承**给子孙 —— 所以**每一个挂在 #ui 下的全屏层
+   * 都必须自己显式写 `pointer-events: auto`**，否则点击会直接穿透到 canvas，
+   * 层上的按钮**永远点不动**。
+   *
+   * ⚠️ 这个 bug 的可怕之处：**不报错、不崩溃、控制台干净**，
+   *    只是功能完全失效 —— 因为它压根没触发 JS（事件没到元素上）。
+   *    2026-10-06 就踩过一次：#weather-brief 忘了写这行，
+   *    结果"收到·出发"点了没反应，游戏进不去。
+   *    回归测试见 tests/single-file-test.js 的"pointer-events"那段。
+   *
+   * 目前开了 auto 的全屏层清单（新加全屏层请对照检查）：
+   *   · #splash          → 启动画面（已开）
+   *   · #weather-brief   → 气象播报过场（本次补开）
+   *   · .panel           → 各类菜单面板（已开，见 .panel 的 pointer-events:auto）
+   *   · .menu-corner     → 左上角工具条（已开）
+   * ============================================================ */
+  #weather-brief {
+    position: absolute; inset: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    background: #0e0e11;
+    pointer-events: auto;      /* ★ 必须显式开：#ui 的 none 会吃掉整层的点击 */
+  }
+  #weather-brief .wb-bg {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    box-sizing: border-box; display: block;
+    image-rendering: pixelated;
+    object-fit: cover;
+    z-index: 0;
+  }
+  /* 压暗，保证播报台看得清（比 splash 压得重一点，因为要读字） */
+  #weather-brief .wb-cover {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(180deg,
+      rgba(10,10,16,0.62) 0%, rgba(10,10,16,0.5) 45%, rgba(10,10,16,0.78) 100%);
+  }
+  /* 播报台：深色面板 + 黄边（和游戏内面板风格统一） */
+  #weather-brief .wb-board {
+    position: relative; z-index: 3;
+    width: min(560px, 90vw);
+    max-height: 90vh;
+    box-sizing: border-box;
+    padding: clamp(16px, 3vh, 28px) clamp(18px, 3vw, 30px);
+    background: rgba(20,20,26,0.94);
+    border: 3px solid var(--mt-yellow);
+    border-bottom-width: 6px;
+    box-shadow: 0 0 0 3px #0e0e11, 0 18px 50px rgba(0,0,0,0.8);
+    text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+    gap: clamp(8px, 1.6vh, 14px);
+  }
+  #weather-brief .wb-tag {
+    font-size: clamp(11px, 1.5vh, 13px);
+    font-weight: 700; letter-spacing: 6px;
+    color: var(--mt-yellow);
+    padding: 3px 12px;
+    border: 2px solid rgba(255,209,0,0.4);
+  }
+  #weather-brief .wb-avatar {
+    width: clamp(72px, 12vh, 96px);
+    height: clamp(72px, 12vh, 96px);
+    image-rendering: pixelated;
+    background: rgba(255,209,0,0.08);
+    border: 2px solid rgba(255,209,0,0.25);
+  }
+  #weather-brief .wb-weather {
+    font-size: clamp(22px, 4vh, 32px);
+    font-weight: 900; letter-spacing: 4px;
+    color: #cfe8ff;
+  }
+  #weather-brief .wb-script {
+    font-size: clamp(13px, 1.9vh, 16px);
+    line-height: 1.75;
+    color: rgba(230,226,210,0.92);
+    text-align: left;
+    border-left: 3px solid rgba(255,209,0,0.5);
+    padding-left: 12px;
+    margin: 4px 0;
+  }
+  #weather-brief .wb-order {
+    font-size: clamp(11px, 1.5vh, 13px);
+    color: rgba(200,196,180,0.6);
+    letter-spacing: 1px;
+  }
+
+  /* ============================================================
+   * ★ 主菜单角落工具条（2026-10-06）★
+   * ============================================================
+   * 十一的要求：
+   *   "将『设置』『按键说明』移至左上角，中间主区域只保留
+   *    『开始跑单』『选择路线』『角色库』等核心入口，减少展示内容；
+   *    将仍处于开发中的『双人同屏模式』『异地联机模式』
+   *     移到侧边或其他位置，避免中间区域杂乱。"
+   *
+   * 布局：
+   *   ┌──────────────────────────────────────┐
+   *   │ [设置][按键说明]                      │ ← 左上角工具条
+   *   │                                       │
+   *   │            第十一单外卖                 │ ← 中间：只有标题 + 3 个核心入口
+   *   │        [ 开始跑单 ]                   │
+   *   │        [ 选择路线 ]                   │
+   *   │        [ 角色库   ]                   │
+   *   │                                       │
+   *   │                        ┌────────────┐ │ ← 右下角：开发中入口
+   *   │                        │ 其他模式   │ │
+   *   │                        └────────────┘ │
+   *   └──────────────────────────────────────┘
+   * ============================================================ */
+  /* ============================================================
+   * ★ 主菜单角落工具条（2026-10-06，同日修正"点不动"）★
+   * ============================================================
+   * ⚠️⚠️ 踩过的坑（十一反馈"设置点不动"）—— 三个原因叠在一起：
+   *
+   *   ① **pointer-events 没开**（这是"点不动"的主因）
+   *      #ui 是 pointer-events:none（设计如此：只让子元素接收点击），
+   *      而 .panel 自己开了 auto —— 但 .menu-corner / .menu-side
+   *      是**挂在 #ui 下的**，忘了开 auto，于是点击直接穿透到底下的 canvas。
+   *      证据：elementFromPoint 命中的是 CANVAS 而不是 BUTTON。
+   *      ⇒ 现在 .menu-corner / .menu-corner .btn 都显式 pointer-events:auto
+   *
+   *   ② **位置滑出了画面**
+   *      原来是 top:10px; left:10px，而 canvas 因为居中 + 12px padding，
+   *      实际从 x≈17 才开始 → 按钮有一半落在蓝色画面外面（x=10 < 17）。
+   *      ⇒ 改成用相对画面的百分比定位（left:2.5%），并且**放大 + 往右下挪**，
+   *        让按钮完整地待在蓝色画面里（十一说"移到这个蓝色画面中来"）
+   *
+   *   ③ **太小不好点**
+   *      原来是 12px 字 + 6px 内边距（约 52×33）。
+   *      ⇒ 放大到 15px 字 + 11px 内边距（约 84×44），
+   *        达到"手指/鼠标都好按"的尺寸
+   *
+   * 像素风做法：硬边、厚底边（像实体键按下去的厚度）、
+   * 黄黑配色、hover 时整体"顶起来"而不是柔光。
+   * ============================================================ */
+  .menu-corner {
+    position: absolute;
+    /* 用百分比而不是 px —— 保证无论窗口多宽，都稳稳落在画面内侧 */
+    top: 3.2%; left: 2.5%;
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+    /* ★ 关键：必须开 pointer-events，否则 #ui 的 none 会把点击吃掉 */
+    pointer-events: auto;
+  }
+  /* 工具条按钮：放大到好按的尺寸 + 像素风。
+   * ⚠️ 选择器要写到 `.menu-corner .btn.small` 这一级 ——
+   *    这些按钮在 JS 里带 'small' class（语义上属于"次要按钮"），
+   *    而全局的 `.btn.small { padding:9px 14px; font-size:13px }` 优先级
+   *    和 `.menu-corner .btn` **相同**（都是 0,2,0），后写的会赢 ——
+   *    实测"设置"被压成 56×37，比邻居小一大截。
+   *    叠加一层 .small 之后特异性更高，稳定压住全局规则。 */
+  .menu-corner .btn,
+  .menu-corner .btn.small {
+    margin: 0;
+    width: auto;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    /* 像素风：深底 + 亮黄硬边 + 厚底边（"实体键"的厚度） */
+    background: #23232a;
+    border: 3px solid var(--mt-yellow);
+    border-bottom-width: 6px;
+    border-bottom-color: var(--mt-yellow-d);
+    color: var(--mt-yellow);
+    /* 硬阴影，不用柔光 */
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.55);
+    pointer-events: auto;          /* ★ 必须显式开，否则 #ui 的 none 会吃掉点击 */
+    transition: transform .05s, background .1s;
+  }
+  .menu-corner .btn:hover,
+  .menu-corner .btn.small:hover {
+    background: var(--mt-yellow);
+    color: var(--mt-ink);
+  }
+  .menu-corner .btn:active,
+  .menu-corner .btn.small:active {
+    /* 按下去：整体下移 + 底边变薄（实体键被压扁的感觉） */
+    transform: translateY(3px);
+    border-bottom-width: 3px;
+  }
+  /* 右下角的"其他模式"（开发中）
+   * ⚠️ 2026-10-06：十一要求把它挪回中间主区域（接在"开始跑单"下面），
+   *    所以 ui.js 已经不再生成 .menu-side 元素了。
+   *    这段 CSS **保留**：以后想把某个次要入口再放回角落时能直接用，
+   *    而且删掉它没有收益（不影响任何现有元素）。 */
+  .menu-side {
+    position: absolute;
+    right: 2.5%; bottom: 4%;
+    z-index: 20;
+    pointer-events: auto;          /* ★ 同样别忘 */
+  }
+  .menu-side .btn {
+    margin: 0;
+    width: auto;
+    padding: 9px 15px;
+    font-size: 13px;
+    background: #1f1f24;
+    border: 3px solid #4a4a56;
+    border-bottom-width: 5px;
+    color: rgba(200,196,180,0.72);
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+    pointer-events: auto;          /* ★ */
+    transition: transform .05s, background .1s;
+  }
+  .menu-side .btn:hover {
+    background: #2a2a31;
+    border-color: #6a6a78;
+    color: rgba(230,226,210,0.95);
+  }
+  .menu-side .btn:active {
+    transform: translateY(3px);
+    border-bottom-width: 2px;
+  }
+  /* ============================================================
+   * ★ 主菜单恢复"黑色像素面板框"（2026-10-06 十一要求）★
+   * ============================================================
+   * 十一原话：
+   *   "我要改回老版的样子：**按钮组装在一个黑色的像素风面板框里**。"
+   *
+   * 【改了什么】
+   *   这里原来是一组"透明外壳"覆盖（background:transparent / border:none /
+   *   box-shadow:none），是之前那轮"减少展示内容/降低杂乱"时加的 ——
+   *   让按钮直接浮在天空背景上。
+   *   现在把这**三条覆盖全部去掉**，让 .panel.menu-fit 重新继承
+   *   .panel 本体的样式（黑底 + 双层硬边框 + 投影）。
+   *
+   * ⚠️ 注意：**不需要重写 .panel 的样式** ——
+   *    老版和现在的 .panel 本体完全一样，所以"还原黑框"只是
+   *    "不再覆盖"，不是"重新画一个框"。这是关键区别（改错方向会白干）。
+   *
+   * ⚠️ 保留的两条：
+   *   · position:relative + z-index:10 —— 保证面板在 canvas 背景之上
+   *     （这条和黑框无关，是层叠顺序，删了会被背景盖住）
+   *   · .btn 宽度 100% —— 面板变窄了，按钮跟着收，避免"挤出面板"
+   */
+  .panel.menu-fit {
+    position: relative;
+    z-index: 10;
+  }
+  /* 主区域按钮宽度收窄一点，避免占满整屏显得笨重 */
+  .panel.menu-fit .btn { width: 100%; }
+
+  /* ============================================================
+   * ★ 主菜单「可上下滑动」提示（2026-10-07 十一反馈"手机屏小看不到"）★
+   * ============================================================
+   * 只在**面板真的溢出**时由 JS 动态插入（见 ui.js 的 refreshMenuScrollHint）。
+   *
+   * 关键在 `position: sticky; bottom: 0` ——
+   *   它让提示**一直吸在面板可视区的底部**（而不是沉在内容末尾，
+   *   那样要滚到最后才看得见，等于没有提示）；
+   *   滚到底之后它回到自然位置、自然滑走。
+   *
+   * ⚠️ `pointer-events: none` —— 绝不能挡住按钮的点击。
+   * ⚠️ 顶部渐变是"内容被遮住"的视觉暗示（像素风用纯色渐变，不用柔光）。
+   * ============================================================ */
+  #menu-scroll-hint {
+    position: sticky;
+    bottom: 0;
+    margin: 2px -8px -6px;
+    padding: 5px 0 3px;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(255,209,0,0.75);
+    background: linear-gradient(to top, var(--panel-bg) 62%, rgba(31,31,36,0));
+    pointer-events: none;
+  }
+
+  /* 窄屏：角落条和侧边可能和主区域打架，收一收。
+   * ⚠️ 只缩尺寸，**不改 pointer-events** —— 点击能力不能因为窗口变小而丢。 */
+  @media (max-width: 700px) {
+    .menu-corner { top: 2.5%; left: 2%; gap: 6px; }
+    .menu-corner .btn { padding: 8px 12px; font-size: 13px; letter-spacing: 1px; }
+    .menu-side { right: 2%; bottom: 3%; }
+    .menu-side .btn { padding: 7px 11px; font-size: 12px; }
+  }
+  /* 矮屏（横屏手机/小窗）：工具条别把主区域挤掉，进一步收 */
+  @media (max-height: 520px) {
+    .menu-corner .btn { padding: 6px 11px; font-size: 12px; }
+    .menu-side .btn { padding: 5px 9px; font-size: 11px; }
+  }
+
+  /* ============================================================
+   * ★ 通关后页面（2026-10-06 优化）★
+   * ============================================================
+   * 十一说"还有通关后页面也需要优化"。
+   * 优化点：
+   *   ① 结算卡片把"星级 + 用时 + 订单"做成一行大字，一眼看到成绩
+   *   ② 主按钮（接下一单）最大最醒目，次要按钮（重跑/换角色/返回）缩到一行
+   *   ③ 面板整体不再套一层厚黑底，改用半透明 —— 背景的像素天空能透出来
+   * ============================================================ */
+  .clear-hero {
+    text-align: center;
+    padding: 6px 0 12px;
+  }
+  .clear-stars {
+    font-size: 40px;
+    letter-spacing: 6px;
+    line-height: 1.1;
+    color: var(--mt-yellow);
+    text-shadow: 3px 3px 0 rgba(0,0,0,0.55);
+  }
+  .clear-title {
+    font-size: 22px; font-weight: 800; color: #fff3b0;
+    letter-spacing: 2px; margin: 6px 0 8px;
+  }
+  /* 本单评价（好评率）—— C3，2026-10-06 第 1 期
+   * 一句人话 + 百分比，放在标题和数据格之间。
+   * 用浅绿（好评色）而不是美团黄，和"星数"区分开层次。 */
+  .clear-rating {
+    font-size: 13px; font-weight: 700;
+    color: #9dffb8;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+  /* 时间项（C2，第 3 期）—— 只在骑手模式出现。
+   * 用中性色，和"好评率"（绿）"星数"（黄）区分开。 */
+  .clear-time {
+    font-size: 12px;
+    color: rgba(200,196,180,0.7);
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+  /* ============================================================
+   * ★ E3 神秘订单：解锁称号 + 挑战提示（第 7 期）★
+   * ============================================================
+   * 紫色系 —— 方案原文要求"紫色神秘订单"，所以整块用紫，
+   * 和游戏其它地方的美团黄/好评绿区分开，一眼看出"这是特殊内容"。
+   * ============================================================ */
+  .title-get {
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: rgba(70, 30, 110, 0.42);
+    border: 2px solid #b47cff;
+    box-shadow: 0 0 0 2px rgba(20,10,30,0.8);
+    text-align: center;
+  }
+  .title-get .tg-head {
+    font-size: 11px; letter-spacing: 4px;
+    color: #d9b8ff;
+    margin-bottom: 4px;
+  }
+  .title-get .tg-name {
+    font-size: 18px; font-weight: 900; letter-spacing: 2px;
+    color: #efe0ff;
+  }
+  /* ---- 「查看成就 →」+ 整块可点（2026-10-06 入口方案 C）----
+   * 十一要求"加一个明确的视觉暗示"。
+   * ⚠️ 暗示要**同时有文字和视觉**：
+   *    文字 = "查看成就 →"；视觉 = hover 时边框变亮 + 整块微微上浮。
+   *    不能只靠"手型光标"（手机没有光标，玩家看不到）。 */
+  .title-get.clickable { cursor: pointer; transition: border-color .12s, transform .12s; }
+  .title-get.clickable:hover {
+    border-color: #d9b8ff;
+    box-shadow: 0 0 0 2px rgba(20,10,30,0.8), 0 0 14px rgba(180,124,255,0.45);
+    transform: translateY(-1px);
+  }
+  .title-get .tg-more {
+    margin-top: 7px;
+    font-size: 11.5px; letter-spacing: 1px;
+    color: #c9a6ff;
+    opacity: 0.92;
+  }
+  .title-get.clickable:hover .tg-more { color: #e6d2ff; }
+  .mystery-hint {
+    margin-top: 10px;
+    padding: 9px 12px;
+    background: rgba(70, 30, 110, 0.24);
+    border-left: 3px solid #b47cff;
+    text-align: left;
+  }
+  .mystery-hint .mh-head {
+    font-size: 12px; font-weight: 700; color: #cfa8ff; margin-bottom: 3px;
+  }
+  .mystery-hint .mh-cond { font-size: 12px; color: rgba(230,226,210,0.85); }
+  .mystery-hint .mh-tip {
+    font-size: 11px; color: rgba(200,196,180,0.55); margin-top: 3px;
+  }
+  /* 骑手等级（第 7 期成长主线）—— 通关页底部一行 */
+  .rank-line {
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(255,209,0,0.75);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .clear-stats {
+    display: flex; justify-content: center; gap: 22px;
+    flex-wrap: wrap;
+    font-size: 13px; color: rgba(220,214,190,0.85);
+  }
+  .clear-stats .cs-val {
+    display: block;
+    font-size: 19px; font-weight: 800;
+    color: var(--mt-yellow);
+    margin-top: 2px;
+  }
+  .clear-stats .cs-label { font-size: 11px; color: rgba(200,196,180,0.5); }
+
+  /* ============================================================
+   * 关卡选择卡片
+   * 像素风：硬边框 + 左侧大序号，像"取餐单列表"
+   * ============================================================ */
+  .lv-list { margin-bottom: 12px; }
+  .lv-card {
+    display: flex; align-items: center; gap: 12px;
+    padding: 11px 13px;
+    margin-bottom: 8px;
+    background: #26262c;
+    border: 3px solid #43434d;
+    cursor: pointer;
+    transition: background .1s, border-color .1s, transform .05s;
+  }
+  .lv-card:hover {
+    background: rgba(255,209,0,0.13);
+    border-color: var(--mt-yellow);
+    transform: translateX(3px);
+  }
+  .lv-card:active { transform: translateX(1px); }
+  .lv-card.locked {
+    opacity: 0.45;
+    cursor: not-allowed;
+    background: #1c1c21;
+    border-color: #303038;
+  }
+  .lv-card.locked:hover { transform: none; border-color: #303038; background: #1c1c21; }
+
+  .lv-num {
+    flex: 0 0 40px;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--mt-yellow);
+    color: var(--mt-ink);
+    font-size: 18px; font-weight: 800;
+    border: 2px solid #0e0e11;
+    box-shadow: inset -3px -3px 0 var(--mt-yellow-d);
+  }
+  .lv-card.locked .lv-num {
+    background: #3a3a44; color: #6a6a76;
+    box-shadow: none; font-size: 15px;
+  }
+  .lv-mid { flex: 1; min-width: 0; }
+  .lv-name {
+    font-size: 14px; font-weight: 700; color: #e8e4d8;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .lv-card:hover .lv-name { color: var(--mt-yellow); }
+  .lv-sub {
+    font-size: 11px; color: rgba(200,196,180,0.6);
+    margin-top: 3px; letter-spacing: 0.5px;
+  }
+
+  /* 主菜单底部的总进度行 */
+  .progress-line {
+    margin-top: 12px;
+    padding: 8px 10px;
+    background: #1a1a1f;
+    border-left: 4px solid var(--mt-yellow);
+    font-size: 12px; color: rgba(220,214,190,0.78);
+    letter-spacing: 0.5px;
+  }
+
+  /* 顶部品牌条（像素风的小标签） */
+  .brand {
+    display: flex; align-items: center; gap: 8px;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+  .brand .logo {
+    width: 22px; height: 22px;
+    background: var(--mt-yellow);
+    border: 2px solid #0e0e11;
+    box-shadow: inset -4px -4px 0 var(--mt-yellow-d);
+  }
+  .brand .bname {
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    color: var(--mt-yellow);
+  }
+
+  #net-status {
+    position: absolute; top: 8px; left: 14px;
+    color: rgba(255,209,0,0.75); font-size: 12px;
+    pointer-events: none;
+  }
+
+  /* ============================================================
+   * 触屏手柄（手机 / 平板）
+   * ============================================================
+   * 手柄骨架无条件建好（见 game.js 的 TouchPad.init），
+   * 但**显示与否只看 .tp-on 这个 class** —— 而它由
+   * TouchPad.syncVisibility() 根据 DEVICE.isMobile() 决定。
+   *
+   * ★ 为什么不再用 body.touch-mode 控制显示 ★
+   *   原来的规则是触屏设备就显示。十一明确要求：
+   *   "即使电脑支持触控，也不能因为检测到触摸屏就显示手机按键"。
+   *   所以显示权收到 .tp-on 上，只有玩家在设备选择页选了
+   *   「手机模式」才会被加上。
+   *
+   * touch-action:none 很关键 —— 否则浏览器会把"按住"解释成
+   * 滚动/缩放页面，按钮就失灵了。
+   * ============================================================ */
+  #touchpad {
+    position: fixed;
+    inset: 0;
+    display: none;              /* 默认藏。只有 .tp-on 才显示 */
+    pointer-events: none;       /* 容器不挡，按钮自己开 */
+    z-index: 50;
+
+    /* ============================================================
+     * ★★ 2026-10-07：按键大小可调（十一要求）★★
+     * ============================================================
+     * 十一原话："设置里面可以加大按键，或者是调小按键，
+     *           根据自己的使用习惯去调整按键大小。"
+     *
+     * 【做法】所有按钮尺寸都写成 `calc(基准值 × var(--tp-scale))`，
+     *   于是**改这一个变量，全部按钮等比缩放**——
+     *   不会出现"方向键变大了但跳跃键没变"这种错位。
+     *
+     * 【取值】0.7（小）~ 1.5（大），默认 1。
+     *   具体由 `save.js` 的 `settings().padScale` 决定，
+     *   在设置页的滑块里调（见 ui.js 的 buildSettings）。
+     *   ⚠️ 这里给 1 只是**兜底**（JS 没跑起来时也能看）。
+     * ============================================================ */
+    --tp-scale: 1;
+
+    /* ★ 2026-10-07 十一反馈④：软键盘遮挡修正 ★
+     * 手机软键盘只改 `visualViewport`，不改 `window.innerHeight`，
+     * 于是 `position:fixed; bottom:18px` 的按钮会被键盘盖住、点不到。
+     * JS 算出"键盘高度"写进这里（见 boot 里的 adaptToKeyboard），
+     * 下面所有 `bottom` 都加上它 ⇒ 键盘弹出时按钮**自动上移**。
+     * ⚠️ 默认 0px（电脑端/无键盘时它就是 0，等于没加）。 */
+    /* ⚠️ `--kb-inset` **故意不在这里声明** —— 它由 JS 写到本元素上
+     *   （见 boot 的 adaptToKeyboard）。空着就等于"继承默认 0px"，
+     *   我们给它写值时不会被这里的声明覆盖掉。 */
+
+    /* ★ 2026-10-07 十一要求：按键**位置**可调（档位式，见 save.js 的 PAD_POS）
+     *   --tp-dx      整体左右平移（左撇子/右撇子）
+     *   --tp-dy      整体高低（手握位置高低）
+     *   --tp-spread  左右两组分开程度（手小的人希望近一点）
+     * ⚠️ 都由 TouchPad.applyScale() 写入；默认 0 ⇒ 不写也是原位置。 */
+    --tp-dx: 0px;
+    --tp-dy: 0px;
+    --tp-spread: 0px;
+  }
+  #touchpad.tp-on { display: block; }
+
+  .tp-btn {
+    position: absolute;
+    /* ⚠️ 这两个 calc 叠在一起：`基准 × 缩放 + 键盘高度`
+     *    —— 缩放管"按键多大"，kb-inset 管"别被键盘挡住"，互不干扰。 */
+    bottom: calc(18px * var(--tp-scale) + var(--kb-inset) + var(--tp-dy));
+    width: calc(76px * var(--tp-scale));
+    height: calc(76px * var(--tp-scale));
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,209,0,0.20);
+    border: 3px solid rgba(255,209,0,0.55);
+    color: rgba(255,240,190,0.92);
+    font-size: calc(30px * var(--tp-scale)); font-weight: 800;
+    font-family: inherit;
+    user-select: none; -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: none;         /* 防止浏览器抢去做滚动/缩放 */
+    pointer-events: auto;       /* 容器关掉了，按钮要单独开回来 */
+    transition: background .06s, transform .06s;
+  }
+  /* ============================================================
+   * ★★ 2026-10-07：隐形热区扩张（十一反馈"按钮不灵敏"）★★
+   * ============================================================
+   * 十一原话："提高这个手机版的灵敏度，就是按钮的灵敏度。"
+   *
+   * 【为什么要单独做这个】
+   *   按钮视觉尺寸是按 `--tp-scale` 走的，小档位下一个方向键
+   *   只有 53px —— 拇指点偏几像素就"没按上"，
+   *   体感就是"按钮不灵敏"。
+   *
+   * 【做法】用 `::before` 撑出一个**比按钮大一圈的透明热区**。
+   *   它不是子元素（不进布局），靠绝对定位向外扩 14px，
+   *   命中测试照样算在按钮上 ⇒ **视觉不变、手指更好按**。
+   *
+   * ⚠️ 扩张量**故意写死 14px 不乘 --tp-scale**：
+   *    这是"用手指去点"的物理尺寸（约 1.4mm），
+   *    跟按钮大小无关 —— 按钮越小越需要绝对量的补足。
+   *    乘 scale 的话小按钮的热区也变小，等于没修。
+   * ⚠️ 只能向外扩，不能真的改 width/height ——
+   *    改了会破坏 `.tp-left/.tp-right` 的相邻间距（两个键会挤在一起）。
+   * ============================================================ */
+  .tp-btn::before {
+    content: '';
+    position: absolute;
+    left: -14px; right: -14px;
+    top: -14px; bottom: -14px;
+    /* 透明但**可命中** —— 绝不能写 display:none（那样就没热区了） */
+    background: transparent;
+    border-radius: inherit;
+  }
+  .tp-btn.held {
+    background: rgba(255,209,0,0.55);
+    color: #1a1a1a;
+    transform: scale(0.94);
+  }
+
+  /* 左手区：方向 */
+  /* 左组：加 dx / dy / -spread（spread 正数=往左走，和右组相反） */
+  /* ★★ 2026-10-07 十一要求：按键可以自己拖到任意位置 ★★
+   * ------------------------------------------------------------
+   * 十一原话："我想可以自己去调这个位置，这个按钮的位置，
+   *           而不是上面写偏左偏右。"
+   *
+   * 【原理】每个按钮多两个**私有**偏移量 `--tp-bx / --tp-by`：
+   *     · 没自定义过 ⇒ JS 不写这俩变量 ⇒ `var(--tp-bx, 0px)` 取默认 0px
+   *       ⇒ 布局**和以前一模一样**（零回归）
+   *     · 拖过之后 ⇒ JS 把玩家的偏移写进去 ⇒ 在档位基础上再叠加
+   *   ⚠️ 用 `var(--tp-bx, 0px)` 的**双参数写法**是关键 ——
+   *      没有 fallback 的话，变量未定义时整个 `calc()` 会失效，
+   *      按钮会掉到 (0,0) 位置（血泪：CSS 变量未定义 = 声明作废）。
+   * ============================================================ */
+  /* ★★★ 2026-10-07 修 bug：左右箭头**必须显式写 bottom** ★★★
+   * ------------------------------------------------------------
+   * 十一反馈："上下箭头（▼）可以拖动，但左右箭头拖不了。"
+   *
+   * 【根因】`.tp-left` / `.tp-right` 原来**只声明了 `left`，没有 `bottom`** ——
+   *   它们的纵向位置是靠**继承** `.tp-btn` 的 `bottom` 规则（`bottom: 18px*scale ...`）。
+   *   而这条继承来的规则**不含 `var(--tp-by)`**！
+   *   ⇒ 结果：拖动时因为写了内联 `top` 看着跟手，
+   *     但**一松手内联清掉、回到 CSS**，y 立刻弹回默认高度。
+   *     存档里其实**存了 y**，只是 CSS 从来不读它 ⇒ 表现为"上下拖不动"。
+   *
+   * 【修法】把 `.tp-btn` 那条完整的 `bottom` 表达式**原样搬过来**，
+   *   末尾加上 `+ var(--tp-by, 0px)` —— 与 `.tp-down`/`.tp-jump`/`.tp-dash` 保持同一写法。
+   *   ⚠️ **必须原样搬全**（含 `--kb-inset` 和 `--tp-dy`）——
+   *      漏一个就会出现"键盘弹出时不躲让"或"整体高低档位失效"的新 bug。
+   * ============================================================ */
+  .tp-left  {
+    left: calc(18px * var(--tp-scale) + var(--tp-dx) - var(--tp-spread) + var(--tp-bx, 0px));
+    bottom: calc(18px * var(--tp-scale) + var(--kb-inset) + var(--tp-dy) + var(--tp-by, 0px));
+  }
+  .tp-right {
+    left: calc(104px * var(--tp-scale) + var(--tp-dx) - var(--tp-spread) + var(--tp-bx, 0px));
+    bottom: calc(18px * var(--tp-scale) + var(--kb-inset) + var(--tp-dy) + var(--tp-by, 0px));
+  }
+  /* 下落键：小一号，放在方向键右侧稍高一点，不抢主要位置 */
+  .tp-down  {
+    left: calc(18px * var(--tp-scale) + var(--tp-dx) - var(--tp-spread) + var(--tp-bx, 0px));
+    bottom: calc(104px * var(--tp-scale) + var(--kb-inset) + var(--tp-dy) + var(--tp-by, 0px));
+    width: calc(60px * var(--tp-scale));
+    height: calc(60px * var(--tp-scale));
+    font-size: calc(22px * var(--tp-scale));
+    background: rgba(255,209,0,0.12);
+    border-color: rgba(255,209,0,0.38);
+  }
+
+  /* 右手区：跳跃 + 冲刺
+   * 十一要求"跳跃和冲刺按钮应比普通方向键更突出" ——
+   * 所以给它们更大的尺寸、更亮的边框、圆形造型。 */
+  .tp-jump {
+    right: calc(22px * var(--tp-scale) - var(--tp-dx) - var(--tp-spread) - var(--tp-bx, 0px));
+    bottom: calc(26px * var(--tp-scale) + var(--kb-inset) + var(--tp-dy) + var(--tp-by, 0px));
+    width: calc(96px * var(--tp-scale));
+    height: calc(96px * var(--tp-scale));
+    border-radius: 50%;
+    font-size: calc(26px * var(--tp-scale));
+    background: rgba(255,209,0,0.30);
+    border-color: rgba(255,209,0,0.80);
+    border-width: 4px;
+  }
+  .tp-dash {
+    right: calc(122px * var(--tp-scale) - var(--tp-dx) - var(--tp-spread) - var(--tp-bx, 0px));
+    bottom: calc(60px * var(--tp-scale) + var(--kb-inset) + var(--tp-dy) + var(--tp-by, 0px));
+    width: calc(82px * var(--tp-scale));
+    height: calc(82px * var(--tp-scale));
+    border-radius: 50%;
+    font-size: calc(24px * var(--tp-scale));
+    background: rgba(255,140,40,0.28);
+    border-color: rgba(255,140,40,0.78);
+    border-width: 4px;
+    color: rgba(255,220,180,0.95);
+  }
+  .tp-dash.held {
+    background: rgba(255,140,40,0.62);
+    color: #1a1a1a;
+  }
+
+  /* ============================================================
+   * ★★ 2026-10-07 新增：暂停 / 全屏（右上角）★★
+   * ============================================================
+   * 十一反馈："手机版完全退不出去，根本没有那个按钮。"
+   *   电脑靠 ESC 暂停/退出，手机没有 ESC ⇒ 屏幕上补一个入口。
+   *
+   * 【为什么放右上角】左下角是方向、右下角是跳/冲（十一指定的布局）。
+   *   系统键放右上角，既不和拇指活动区打架，也不容易误触。
+   * ============================================================ */
+  .tp-pause, .tp-full {
+    top: calc(12px * var(--tp-scale));
+    width: calc(56px * var(--tp-scale));
+    height: calc(56px * var(--tp-scale));
+    border-radius: calc(14px * var(--tp-scale));
+    font-size: calc(22px * var(--tp-scale));
+    background: rgba(20,20,24,0.42);
+    border: 2px solid rgba(255,255,255,0.42);
+    color: rgba(255,255,255,0.88);
+    bottom: auto;              /* 覆盖 .tp-btn 的 bottom */
+  }
+  /* ⚠️ 右上角的系统键**只跟 dx**，不跟 spread/dy ——
+   *   它们是系统键不是操作键，跟太多会跑到奇怪的位置。
+   *   dx 还是要跟：左撇子把操作区换到右边时，系统键也得让位。 */
+  .tp-pause { right: calc(14px * var(--tp-scale) - var(--tp-dx)); }
+  .tp-full  { right: calc(78px * var(--tp-scale) - var(--tp-dx)); }
+  .tp-pause.held, .tp-full.held {
+    background: rgba(255,209,0,0.72);
+    border-color: rgba(255,209,0,0.9);
+    color: #1a1a1a;
+  }
+  /* 小屏（矮屏）时缩一号，别挡画面 */
+  @media (max-height: 420px) {
+    .tp-pause, .tp-full {
+      width: calc(44px * var(--tp-scale));
+      height: calc(44px * var(--tp-scale));
+      font-size: calc(18px * var(--tp-scale));
+    }
+    .tp-full { right: calc(64px * var(--tp-scale)); }
+  }
+
+  /* 手机模式下，面板和按钮适当放宽间距，方便手指点 */
+  body.dev-mobile .btn { padding: 13px 18px; }
+  body.dev-mobile .char { padding: 12px; }
+
+  /* ============================================================
+   * ★★ 2026-10-07 新增：按键位置"拖拽编辑"模式 ★★
+   * ============================================================
+   * 十一要求："我想可以自己去调这个位置，这个按钮的位置。"
+   *
+   * 进入编辑模式时，手柄容器多一个 .tp-editing：
+   *   · 铺一层半透明底，明确告诉玩家"现在在调位置，不是玩游戏"
+   *   · 每个按钮加虚线框 + 轻微放大，明确"它是可拖的"
+   *   · 按钮加 `touch-action: none` + `cursor: move`（桌面端调试也顺手）
+   * ============================================================ */
+  #touchpad.tp-editing { background: rgba(8,8,12,0.62); }
+  #touchpad.tp-editing .tp-btn {
+    border-style: dashed;
+    border-color: rgba(120,220,255,0.95);
+    box-shadow: 0 0 0 2px rgba(120,220,255,0.25);
+    opacity: 0.96;
+    transition: none;            /* 编辑时别做过渡，拖起来才跟手 */
+    cursor: move;
+  }
+  #touchpad.tp-editing .tp-btn.tp-dragging {
+    border-color: #7fe3ff;
+    box-shadow: 0 0 18px rgba(120,220,255,0.85);
+    transform: scale(1.06);
+    z-index: 60;
+  }
+  /* ⚠️ 编辑模式**必须允许显示**（游戏可能不在 PLAYING 状态）——
+   *   syncVisibility() 里那句 `mobile && playing` 会被 .tp-editing 覆盖。 */
+  #touchpad.tp-editing { display: block !important; }
+  /* 编辑提示条：底部居中，告诉玩家怎么退出 */
+  #pad-edit-tip {
+    position: fixed;
+    left: 50%; bottom: 14px;
+    transform: translateX(-50%);
+    z-index: 61;
+    display: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(10,10,14,0.86);
+    border: 2px solid rgba(120,220,255,0.6);
+    color: #d8f4ff;
+    font-size: 15px; font-weight: 700;
+    text-align: center; line-height: 1.5;
+    pointer-events: none;        /* 别挡住拖动 */
+  }
+  body.pad-editing #pad-edit-tip { display: block; }
+
+  /* 竖屏时：手柄藏起来，改用"请横屏"提示（竖屏玩横版游戏实在难受） */
+  body.portrait #touchpad { display: none; }
+
+  /* 竖屏提示遮罩
+   * ★ 只在手机模式显示 ★ —— 电脑上窗口拉窄（innerHeight > innerWidth）
+   * 不该弹出"请把手机横过来"，那会让人莫名其妙。 */
+  #rotate-hint {
+    position: fixed; inset: 0;
+    display: none;
+    align-items: center; justify-content: center;
+    flex-direction: column; gap: 14px;
+    background: #0e0e11;
+    z-index: 90;
+    color: var(--mt-yellow);
+    font-size: 16px; font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.9;
+  }
+  body.dev-mobile.portrait #rotate-hint { display: flex; }
+  #rotate-hint .icon {
+    font-size: 44px;
+    animation: rot 1.8s ease-in-out infinite;
+  }
+  @keyframes rot {
+    0%, 40% { transform: rotate(0deg); }
+    60%, 100% { transform: rotate(-90deg); }
+  }
+
+  /* 手机模式下隐藏键盘键位表（没用还占地方） */
+  body.dev-mobile .keys { display: none; }
+
+  /* ============================================================
+   * ★ 2026-10-06 新增界面的样式 ★
+   * ============================================================
+   * 覆盖：设备选择页 / 角色库 / 设置 / 其他模式 / 角色解锁 / 失败详情
+   * 风格延续：黄色 + 黑色 + 橙色的像素街机感，硬边框、厚底边。
+   * ============================================================ */
+
+  /* ---- 按钮补充样式：弱化 / 危险 / 选中态 ---- */
+  /* .muted —— "其他模式"这类低优先级入口。
+   * 十一要求"双人入口不能比开始跑单更醒目"，
+   * 所以压暗底色、去掉黄边、缩小字号。 */
+  .btn.muted {
+    background: #232329;
+    border-color: #33333b;
+    color: rgba(200,196,180,0.62);
+    font-size: 14px;
+    padding: 11px 14px;
+  }
+  .btn.muted:hover {
+    background: #2a2a31;
+    border-color: #4a4a56;
+    color: rgba(220,216,200,0.8);
+  }
+  /* .danger —— 清除存档。
+   * 用红色但**不是**主按钮的黄色 —— 要让玩家下意识犹豫一下。 */
+  .btn.danger {
+    background: #5a2323;
+    border-color: #a33;
+    border-bottom-color: #7a2222;
+    color: #ffdada;
+  }
+  .btn.danger:hover {
+    background: #7a2c2c;
+    border-color: #f66;
+    color: #fff;
+  }
+  /* .on —— 设置里的"已开启"状态。
+   * 注意：**不只靠颜色**，文字本身也写着"已开启/已关闭"。 */
+  .btn.on {
+    background: rgba(255,209,0,0.18);
+    border-color: rgba(255,209,0,0.7);
+    color: var(--mt-yellow);
+  }
+  .btn.small {
+    display: inline-block; width: auto;
+    padding: 9px 14px; font-size: 13px;
+  }
+
+  /* ---- 设备选择页 ---- */
+  .devices {
+    display: flex; gap: 14px;
+    margin: 6px 0 8px;
+  }
+  .device-card {
+    flex: 1 1 0;
+    /* 十一要求"两个选项必须足够大，手机上容易点击" */
+    min-height: 190px;
+    padding: 18px 12px 14px;
+    background: #232329;
+    border: 3px solid #43434d;
+    border-bottom-width: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: background .1s, border-color .1s, transform .05s;
+  }
+  .device-card:hover {
+    background: rgba(255,209,0,0.12);
+    border-color: var(--mt-yellow);
+    transform: translateY(-2px);
+  }
+  .device-card:active { transform: translateY(1px); border-bottom-width: 3px; }
+  .device-card .dev-icon {
+    display: block; margin: 0 auto 10px;
+    image-rendering: pixelated;
+  }
+  .device-card .dev-title {
+    font-size: 17px; font-weight: 800; color: var(--mt-yellow);
+    margin-bottom: 5px;
+  }
+  .device-card .dev-desc {
+    font-size: 12px; color: rgba(220,214,190,0.7);
+    line-height: 1.5; margin-bottom: 8px;
+  }
+  .device-card .dev-keys {
+    font-size: 11px; color: rgba(200,196,180,0.45);
+    line-height: 1.5;
+  }
+  /* 手机上竖着拿时，两个卡片竖排更容易点 */
+  @media (max-width: 620px) {
+    .devices { flex-direction: column; }
+    .device-card { min-height: 0; padding: 14px; }
+    .device-card .dev-icon { width: 76px; height: 62px; }
+  }
+
+  /* ---- 主菜单底部信息行 ---- */
+  .menu-info {
+    font-size: 12px; color: rgba(200,196,180,0.5);
+    text-align: center; margin-top: 4px;
+  }
+
+  /* ---- 其他模式页的提示条 ---- */
+  .dev-notice {
+    font-size: 12px; line-height: 1.65;
+    color: rgba(255,190,140,0.85);
+    background: rgba(255,140,40,0.09);
+    border-left: 3px solid rgba(255,140,40,0.6);
+    padding: 9px 11px; margin-bottom: 14px;
+  }
+
+  /* ---- 设置页 ---- */
+  .settings { margin-bottom: 6px; }
+  .set-label {
+    font-size: 12px; font-weight: 700; color: rgba(220,214,190,0.62);
+    letter-spacing: .5px; margin: 12px 0 7px;
+  }
+  .set-label.danger-label { color: rgba(255,150,150,0.75); }
+  .set-row {
+    display: flex; align-items: center;
+    gap: 8px; margin-bottom: 4px;
+  }
+  .set-row .set-name {
+    flex: 1;
+    font-size: 14px; color: #e8e4d8;
+  }
+  .set-row .btn { margin-bottom: 0; }
+  /* 设备切换那一行的两个按钮并排、等宽 */
+  .set-row .btn.set-toggle { flex: 1; text-align: center; }
+
+  /* ============================================================
+   * ★ 按键大小滑块（2026-10-07 十一要求）
+   * ============================================================
+   * 十一要"根据使用习惯调整按键大小"，所以用**滑块**（连续可调）
+   * 而不是三档按钮 —— 三档必有人觉得"高不成低不就"。
+   *
+   * ⚠️ `accent-color` 一行就能把原生滑块的轨道/滑块染成主题黄，
+   *    不用自己画一套（自绘滑块在移动端很容易出现
+   *    "拖不动/手指移出就断"的问题）。
+   * ============================================================ */
+  .set-range {
+    flex: 1.4;
+    min-width: 120px;
+    height: 26px;
+    accent-color: #ffd100;
+    background: transparent;
+    cursor: pointer;
+    /* 手机上要允许拖动 —— 别被页面的滚动/缩放手势抢走 */
+    touch-action: none;
+  }
+  /* 手机模式下把滑块做大一点，手指好拖 */
+  body.dev-mobile .set-range { height: 40px; }
+  .set-hint {
+    font-size: 11px; color: rgba(200,196,180,0.42);
+    margin: 0 0 10px; line-height: 1.5;
+  }
+  .reset-btn { margin-top: 4px; }
+
+  /* ---- 角色库 ---- *
+   * ⚠️ 十一明确要求"不使用卡片套卡片"。
+   *    所以外层 .panel 是唯一的"卡片"，
+   *    .lib-card 是**行**（用左边框而不是四周描边来分组），
+   *    里面不再有任何带边框的方框。 */
+  /* ---- 角色库 / 成就：顶部 tab 条（2026-10-06）----
+   * 十一的入口方案 B：角色库页顶部加 [骑手] / [成就] 两个 tab。
+   * ⚠️ 切 tab 走的是**重绘**（改 UI.lastKey + syncUI），
+   *    不是 CSS 显隐 —— 所以这里只管"长什么样"，
+   *    哪一个是 active 由 JS 在渲染时给 class 决定。 */
+  .lib-tabs {
+    display: flex; gap: 0;
+    margin: 0 0 12px;
+    border-bottom: 2px solid #33333a;
+  }
+  .lib-tab {
+    flex: 1 1 0;
+    padding: 9px 6px;
+    text-align: center;
+    font-size: 13px; font-weight: 700;
+    color: rgba(200,196,180,0.55);
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;             /* 压住父级的下边框，做出"选中下划线" */
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .lib-tab:hover { color: #efe9d0; }
+  /* ★ 选中态用 **颜色 + 下划线 + 前缀圆点**（不只靠颜色） */
+  .lib-tab.on {
+    color: var(--mt-yellow);
+    border-bottom-color: var(--mt-yellow);
+  }
+  .lib-tab .tab-dot { opacity: 0; margin-right: 5px; }
+  .lib-tab.on .tab-dot { opacity: 1; }
+
+  /* ---- 成就列表（2026-10-06）----
+   * ⚠️ 设计要点：未解锁的**也要显示**，而且要显示条件文字。
+   *    这和角色库的"零剧透"方向相反 —— 角色是惊喜（藏），
+   *    成就是清单（显示灰版 + 条件才有目标感）。
+   * ⚠️ 状态用 **图标 + 文字** 表达，不只靠颜色（项目无障碍约定）。 */
+  .ach-stat {
+    display: flex; align-items: baseline; gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 0 14px;
+    padding: 9px 12px;
+    background: rgba(255,255,255,0.04);
+    border-left: 4px solid var(--mt-yellow);
+  }
+  .ach-stat-num { font-size: 15px; font-weight: 800; color: var(--mt-yellow); }
+  .ach-stat-tip { font-size: 12px; color: rgba(200,196,180,0.72); }
+
+  .ach-list { margin-bottom: 12px; }
+  .ach-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 12px 12px 13px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.028);
+    border-left: 4px solid #4a4a56;
+  }
+  .ach-icon {
+    flex: 0 0 auto;
+    font-size: 22px; line-height: 1.2;
+    width: 30px; text-align: center;
+  }
+  .ach-body { flex: 1 1 auto; min-width: 0; }
+  .ach-head {
+    display: flex; align-items: baseline; gap: 9px;
+    flex-wrap: wrap;
+    margin-bottom: 3px;
+  }
+  .ach-name { font-size: 14px; font-weight: 700; color: #e8e4d8; }
+  .ach-state {
+    font-size: 10px;
+    padding: 1px 7px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  /* ---- 进度（如「5 / 20」）----
+   * 只有"有进度概念"的成就才显示（累计送达 N 单这类）。
+   * ⚠️ 用文字不用进度条：项目里没有进度条组件，
+   *    而且纯文字对色盲玩家更友好、对屏幕阅读器更可读。 */
+  .ach-prog {
+    font-size: 10.5px;
+    color: #9fd0a0;
+    background: rgba(120,200,130,0.1);
+    padding: 1px 7px;
+    border: 1px solid rgba(120,200,130,0.28);
+    white-space: nowrap;
+  }
+  .ach-cond {
+    font-size: 12px;
+    line-height: 1.7;
+    color: rgba(200,196,180,0.8);
+    margin-bottom: 2px;
+  }
+  .ach-from { font-size: 11px; color: rgba(160,156,140,0.72); }
+
+  /* ---- 已达成：亮色 + 金色左边条 ---- */
+  .ach-row.got { border-left-color: var(--mt-yellow); background: rgba(255,209,0,0.07); }
+  .ach-row.got .ach-state {
+    color: #ffd100;
+    border-color: rgba(255,209,0,0.45);
+    background: rgba(255,209,0,0.12);
+  }
+
+  /* ---- 未达成：灰（但条件文字仍然可读，别压太暗）----
+   * ⚠️ 条件文字是"给玩家的目标"，不是要藏的东西 ——
+   *    所以 opacity 只压到 0.7，别用 help-row.locked 那种 0.42。 */
+  .ach-row.locked .ach-name { opacity: 0.62; }
+  .ach-row.locked .ach-state {
+    color: #8a8a96;
+    border-color: rgba(138,138,150,0.4);
+    background: rgba(138,138,150,0.1);
+  }
+  .ach-row.locked .ach-icon { opacity: 0.55; }
+
+  .ach-foot { margin-top: 6px; }
+
+  /* ---- 🏁 PK 入口卡（2026-10-06）---- */
+  .pk-entry {
+    margin: 12px 0;
+    padding: 12px 14px;
+    background: rgba(255,209,0,0.06);
+    border-left: 4px solid var(--mt-yellow);
+  }
+  .pk-entry-title {
+    font-size: 14px; font-weight: 800;
+    color: var(--mt-yellow);
+    margin-bottom: 5px;
+  }
+  .pk-entry-desc {
+    font-size: 11.5px; line-height: 1.7;
+    color: rgba(200,196,180,0.78);
+    margin-bottom: 10px;
+  }
+
+  /* ---- 🏁 PK 选骑手页：我 vs AI ---- */
+  .pk-vs {
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; margin: 10px 0 16px;
+  }
+  .pk-vs-side {
+    display: flex; flex-direction: column; align-items: center;
+    padding: 10px 14px; min-width: 104px;
+    border: 2px solid rgba(255,209,0,0.55);
+    background: rgba(255,209,0,0.07);
+  }
+  .pk-vs-side.ai {
+    border-color: rgba(143,168,200,0.6);
+    background: rgba(143,168,200,0.08);
+  }
+  .pk-vs-tag {
+    font-size: 11px; letter-spacing: 2px;
+    color: #d0ccbc; margin-bottom: 4px;
+  }
+  .pk-vs-side.ai .pk-vs-tag { color: #9fb6d0; }
+  .pk-vs-name {
+    font-size: 13px; font-weight: 800;
+    color: var(--mt-yellow); margin-top: 4px;
+  }
+  .pk-vs-side.ai .pk-vs-name { color: #b9cde0; }
+  .pk-vs-mid {
+    font-size: 20px; font-weight: 900; font-style: italic;
+    color: #ff8a6a; letter-spacing: 1px;
+  }
+
+  /* ---- 🏁 PK 选骑手页：只有 1 名骑手时的解锁提示 ---- */
+  .pk-lock-hint {
+    margin: 8px 0 12px;
+    padding: 9px 12px;
+    font-size: 11.5px;
+    line-height: 1.7;
+    color: rgba(230,222,190,0.9);
+    background: rgba(255,209,0,0.08);
+    border-left: 3px solid rgba(255,209,0,0.6);
+  }
+
+  /* ---- 🏁 PK 结算（胜负）---- */
+  .pk-result {
+    margin-top: 10px;
+    padding: 12px 14px;
+    text-align: center;
+    border: 2px solid #4a4a56;
+    background: rgba(255,255,255,0.04);
+  }
+  .pk-result.win { border-color: #5ee36a; background: rgba(94,227,106,0.1); }
+  .pk-result.lose { border-color: #ff8a6a; background: rgba(255,138,106,0.1); }
+  .pk-result .pkr-head { font-size: 11px; letter-spacing: 3px; color: #d0ccbc; margin-bottom: 5px; }
+  .pk-result .pkr-verdict { font-size: 22px; font-weight: 900; letter-spacing: 2px; }
+  .pk-result.win .pkr-verdict { color: #5ee36a; }
+  .pk-result.lose .pkr-verdict { color: #ff8a6a; }
+  .pk-result .pkr-detail { font-size: 12px; color: rgba(200,196,180,0.8); margin-top: 6px; }
+
+  .lib-list { margin-bottom: 10px; }
+  .lib-card {
+    display: flex; gap: 12px;
+    padding: 12px 10px 12px 13px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.028);
+    border-left: 4px solid #4a4a56;   /* 左竖条分组，不画四周边框 */
+  }
+  .lib-card.active { border-left-color: var(--mt-yellow); background: rgba(255,209,0,0.075); }
+  .lib-card.locked { opacity: 0.62; }
+
+  .lib-left { flex: 0 0 92px; text-align: center; }
+  .lib-left .lib-avatar {
+    display: block; margin: 0 auto 6px;
+    image-rendering: pixelated;
+    width: 88px; height: 88px;
+  }
+  .lib-left .lib-name {
+    font-size: 14px; font-weight: 700; color: #e8e4d8;
+    /* 长名字也不能溢出去 —— 十一要求"角色名称和说明不能溢出容器" */
+    word-break: break-word; line-height: 1.3;
+  }
+  .lib-left .lib-tagline {
+    font-size: 10px; color: rgba(200,196,180,0.5);
+    margin-top: 3px; line-height: 1.4;
+  }
+
+  .lib-mid {
+    flex: 1 1 auto; min-width: 0;   /* min-width:0 是 flex 里防溢出的关键 */
+  }
+  .attr-row {
+    display: flex; align-items: center; gap: 6px;
+    margin-bottom: 3px;
+  }
+  .attr-row .attr-label {
+    flex: 0 0 58px;
+    font-size: 11px; color: rgba(200,196,180,0.6);
+  }
+  .attr-bar { display: flex; gap: 2px; }
+  .attr-cell {
+    width: 11px; height: 9px;
+    background: #33333b;
+    display: block;
+  }
+  /* 填充格用黄色 —— 但**不只用颜色**：旁边还有数字 val，
+   * 色盲玩家靠数字也能读懂。 */
+  .attr-cell.filled { background: var(--mt-yellow); }
+  .attr-row .attr-val {
+    font-size: 10px; color: rgba(200,196,180,0.45);
+    margin-left: 2px;
+  }
+  .lib-weak {
+    font-size: 11px; color: rgba(255,170,170,0.68);
+    margin: 6px 0 3px;
+  }
+  .lib-desc {
+    font-size: 11px; color: rgba(200,196,180,0.55);
+    line-height: 1.6; margin-top: 4px;
+    word-break: break-word;
+  }
+
+  .lib-right {
+    flex: 0 0 128px;
+    display: flex; flex-direction: column;
+    align-items: stretch; gap: 4px;
+  }
+  .lib-state {
+    font-size: 11px; font-weight: 700;
+    color: rgba(200,196,180,0.6);
+  }
+  .lib-state.ok { color: #9dffb8; }
+  .lib-state.locked-state { color: rgba(255,190,140,0.85); }
+  .lib-rectitle {
+    font-size: 10px; color: rgba(200,196,180,0.42);
+    margin-top: 4px;
+  }
+  .lib-records { display: flex; flex-direction: column; gap: 2px; }
+  .lib-rec-line {
+    display: flex; justify-content: space-between;
+    font-size: 10px; color: rgba(200,196,180,0.62);
+  }
+  .lib-rec-line .lr-time { color: var(--mt-yellow); }
+  .lib-rec-none { font-size: 10px; color: rgba(200,196,180,0.35); }
+  .lib-uses { font-size: 10px; color: rgba(200,196,180,0.42); margin-top: 3px; }
+  .lib-unlock {
+    font-size: 11px; color: rgba(255,190,140,0.8);
+    line-height: 1.5;
+  }
+  .lib-current {
+    font-size: 11px; color: var(--mt-yellow);
+    text-align: center; padding: 6px 0;
+  }
+  .lib-note {
+    font-size: 11px; color: rgba(200,196,180,0.45);
+    line-height: 1.6; text-align: center;
+    margin: 4px 0 10px;
+  }
+  .pick-more {
+    font-size: 12px; color: rgba(255,190,140,0.75);
+    text-align: center; margin-bottom: 10px;
+  }
+
+  /* 角色选择页的能力条（比角色库的更紧凑） */
+  .char .ctag {
+    font-size: 11px; color: rgba(255,209,0,0.72);
+    margin-top: 2px;
+  }
+  .cbar-hero { margin: 7px 0 4px; }
+  .cbar-row { display: flex; align-items: center; gap: 5px; margin-bottom: 2px; }
+  .cbar-label {
+    font-size: 10px; color: rgba(200,196,180,0.55);
+    flex: 0 0 14px; text-align: center;
+  }
+  .cbar { display: flex; gap: 2px; flex: 1; justify-content: center; }
+  .cbar-cell { width: 10px; height: 7px; background: #33333b; display: block; }
+  .cbar-cell.filled { background: var(--mt-yellow); }
+  .char .cweak {
+    font-size: 10px; color: rgba(255,170,170,0.68);
+    margin-top: 3px;
+  }
+
+  /* ---- 角色解锁界面 ---- */
+  .unlock-wrap { text-align: center; margin: 4px 0 14px; }
+  .unlock-wrap .unlock-avatar {
+    display: block; margin: 0 auto 10px;
+    image-rendering: pixelated;
+  }
+  .unlock-wrap .unlock-name {
+    font-size: 20px; font-weight: 800; color: var(--mt-yellow);
+    margin-bottom: 4px;
+  }
+  .unlock-wrap .unlock-tag {
+    font-size: 13px; color: rgba(220,214,190,0.78); margin-bottom: 6px;
+  }
+  .unlock-wrap .unlock-routes {
+    font-size: 11px; color: rgba(255,190,140,0.8); margin-bottom: 8px;
+  }
+  .unlock-wrap .unlock-desc {
+    font-size: 12px; color: rgba(200,196,180,0.6);
+    line-height: 1.65; text-align: left;
+    padding: 0 4px;
+  }
+  .unlock-note {
+    font-size: 11px; color: rgba(200,196,180,0.4);
+    text-align: center; margin-top: 6px;
+  }
+
+  /* ---- 失败界面 ---- */
+  .over-box {
+    background: rgba(255,90,90,0.07);
+    border-left: 3px solid rgba(255,90,90,0.6);
+    padding: 11px 13px;
+    margin-bottom: 14px;
+  }
+  .over-reason {
+    font-size: 14px; font-weight: 700; color: #ffb3b3;
+    margin-bottom: 6px;
+  }
+  .over-stats {
+    font-size: 12px; color: rgba(220,214,190,0.68);
+    margin-bottom: 6px;
+  }
+  .over-tip {
+    font-size: 12px; color: rgba(255,209,0,0.75);
+    line-height: 1.6;
+  }
+
+  /* ---- 手机模式下的界面适配 ---- *
+   * 十一要求"手机模式下适当缩小 HUD，为虚拟按键留出空间"，
+   * 面板同理 —— 屏幕就那么大，字号和留白都要收一收。 */
+  body.dev-mobile .panel {
+    width: min(94vw, 720px);
+    padding: 16px 14px 14px;
+    max-height: 94vh;
+  }
+  body.dev-mobile .panel h1 { font-size: 19px; }
+  body.dev-mobile .panel .sub { font-size: 12px; margin-bottom: 12px; }
+  body.dev-mobile .btn { padding: 12px 14px; font-size: 15px; }
+  body.dev-mobile .btn .desc { font-size: 11px; }
+  body.dev-mobile .lib-card { flex-wrap: wrap; }
+  body.dev-mobile .lib-right { flex: 1 1 100%; margin-top: 8px; }
+  body.dev-mobile .lib-right { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px; }
+  body.dev-mobile .lib-records { flex-direction: row; gap: 10px; }
+  body.dev-mobile .lib-rectitle { flex: 1 1 100%; }
+
+  /* 横屏手机空间更扁，进一步压缩纵向留白 */
+  @media (max-height: 460px) {
+    .panel { max-height: 94vh; padding: 13px 14px 11px; }
+    .panel h1 { font-size: 18px; margin-bottom: 2px; }
+    .panel .sub { margin-bottom: 10px; }
+    .btn { padding: 10px 13px; margin-bottom: 7px; }
+    .device-card { min-height: 150px; }
+  }
+
+  /* ============================================================
+   * ★ 矮屏兜底（2026-10-06）★
+   * ============================================================
+   * 十一"一屏呈现"要求的保险绳。
+   * 常见笔记本（768~900 高）走不到这里 —— 它们的内容本来就能放下。
+   * 这里只兜住"浏览器窗口被拉得很扁"的极端情况，
+   * 保证按钮仍然全部可见、可点，而不是被裁掉只能靠滚动。
+   * ============================================================ */
+  @media (max-height: 620px) {
+    .panel.menu-fit { padding: 12px 16px; }
+    .panel.menu-fit h1 { font-size: 19px; }
+    .panel.menu-fit .sub { font-size: 11px; margin-bottom: 8px; }
+    .panel.menu-fit .btn {
+      padding: 8px 13px; margin-bottom: 5px; font-size: 14px;
+    }
+    .panel.menu-fit .btn .desc { font-size: 10px; margin-top: 1px; }
+    .panel.menu-fit .progress-line { margin-top: 5px; padding: 5px 9px; font-size: 11px; }
+    .panel.menu-fit .menu-info { font-size: 11px; }
+  }
+  @media (max-height: 520px) {
+    .panel.menu-fit .brand { display: none; }         /* 极度压缩时先让出品牌条 */
+    .panel.menu-fit .btn .desc { display: none; }     /* 再舍掉按钮副标题 */
+    .panel.menu-fit .btn { padding: 7px 12px; margin-bottom: 4px; }
+  }
+
+  /* ============================================================
+   * ★★ 小屏主菜单：改为「面板内滚动」，绝不裁切（2026-10-07 十一反馈）★★
+   * ============================================================
+   * 十一原话：
+   *   "我的手机屏幕较小，打开游戏后主菜单封面只显示前两栏内容，
+   *    无法滑动，也看不到后面的选项。"
+   *
+   * 【实测复现（真浏览器，667×375 / 640×360 / 600×320）】
+   *   · 面板 overflow-y = **visible**（因为 .panel.no-scroll 写死了
+   *     `overflow: visible`）⇒ **根本不能滚动**
+   *   · 面板 bottom = 406 > 视口 375 ⇒ **下方 31px 被切掉**
+   *   · 600×320 时「其他模式」按钮 top=299 / bottom=340
+   *     ⇒ **完全在屏幕外、点不到**
+   *
+   * 【为什么原来会切掉】
+   *   `.panel.menu-fit { margin-top: clamp(120px, 24vh, 200px) }`
+   *   是把整块黑框往下推、给 canvas 大标题让位的。
+   *   矮屏上这个 120px 的固定下推量 + 面板自身 ~317px 高
+   *   = 437px > 360px 视口 ⇒ 必然溢出。
+   *   而 `.no-scroll` 又关掉了滚动 ⇒ 溢出部分**永久不可达**。
+   *
+   * 【修法：只在"真的放不下"的矮屏上开启滚动】
+   *   · `max-height: calc(100% - 52px)` —— 把面板钉在视口内（不再溢出）
+   *   · `overflow-y: auto` —— 内容超高时**在面板内部滚动**
+   *   · `margin-top: 46px` —— 顶部那 46px 是**留给左上角工具条
+   *     （设置／按键说明）的**：面板从 46px 开始，
+   *     工具条底 ≈44px ⇒ **两者永不重叠**。
+   *     面板自己的滚动是「裁剪在自己的边框内」，
+   *     所以滚动时内容也不会跑到工具条底下 —— 这是关键。
+   *   · `overscroll-behavior: contain` —— 滚到底不要带动外层页面
+   *   · `touch-action: pan-y` —— 允许单指纵向拖动（捏合仍被 JS 拦）
+   *
+   * ⚠️ 为什么用 500px 而不是"所有屏幕"：
+   *   高度 ≥500px 时内容本来就放得下（且能完整看到 canvas 大标题），
+   *   不能为了矮屏把大屏的观感一起改掉。
+   *   阈值取 500 覆盖全部横屏手机（320~430）＋ 很矮的小窗。
+   *
+   * ⚠️ 选择器必须是 `.panel.no-scroll.menu-fit`（0,3,0）——
+   *    `.panel.no-scroll` 是 0,2,0，写低了压不住它，
+   *    滚动永远开不起来（这正是这个 bug 最阴的地方：不报错、只是没法滚）。
+   * ============================================================ */
+  @media (max-height: 500px) {
+    /* ① 先把左上角工具条**钉成固定高度**（实测算过：原来 51px，
+     *    而预留带只有 46px ⇒ 重叠 5px）。
+     *    固定高度 + flex 垂直居中，才能保证"预留多少就是多少"，
+     *    不受字体度量/系统字号影响（iOS 上字号可能被放大）。 */
+    .menu-corner {
+      top: 2px; left: 2%; gap: 6px;
+      height: 32px;
+      align-items: stretch;
+    }
+    .menu-corner .btn,
+    .menu-corner .btn.small {
+      display: flex; align-items: center; justify-content: center;
+      height: 32px; padding: 0 10px; margin: 0;
+      font-size: 12px; letter-spacing: 1px;
+      border-bottom-width: 4px;
+    }
+    /* ② 面板从 40px 开始 —— 工具条底 = 2 + 32 = 34px
+     *    ⇒ 留 6px 间隙，**两者永不重叠**。
+     *    面板自己的滚动是"裁剪在自己的边框内"，
+     *    所以滚动内容也不会跑到工具条底下。 */
+    .panel.no-scroll.menu-fit {
+      margin-top: 40px;
+      margin-bottom: 6px;
+      max-height: calc(100% - 46px);       /* 钉在视口内 ⇒ 绝不溢出屏幕 */
+      overflow-y: auto;
+      overflow-x: hidden;                  /* 只纵向滚动，不横向溢出 */
+      -webkit-overflow-scrolling: touch;   /* iOS 惯性滚动 */
+      overscroll-behavior: contain;
+      touch-action: pan-y;
+      /* 滚动条像素风（和 .help-box 一致） */
+      scrollbar-width: thin;
+      scrollbar-color: #45454f #26262c;
+    }
+    .panel.no-scroll.menu-fit::-webkit-scrollbar { width: 8px; }
+    .panel.no-scroll.menu-fit::-webkit-scrollbar-track { background: #26262c; }
+    .panel.no-scroll.menu-fit::-webkit-scrollbar-thumb {
+      background: #45454f;
+      border: 2px solid #26262c;
+    }
+  }
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game"></canvas>
+
+    <!-- UI 浮层：所有可点击的界面都放这里 -->
+    <div id="ui"></div>
+
+    <div id="net-status"></div>
+  </div>
+
+  <!-- 竖屏提示：这个游戏是横屏设计的，竖着拿手机画面会非常小 -->
+  <div id="rotate-hint">
+    <div class="icon">📱</div>
+    <div>请把手机横过来玩</div>
+    <div style="font-size:12px;font-weight:400;opacity:.65;">
+      本游戏为横屏设计 · 横屏后即可开始
+    </div>
+  </div>
+
+  <!-- ============================================================
+       云服务 SDK 加载器（多源自动降级）
+
+       ⚠️ 踩过的坑：原来直接写死 <script src="https://cdn.jsdelivr.net/...">，
+       结果**在手机（中国大陆移动网络）上根本连不上** —— jsdelivr 的默认域名
+       在国内常年被 DNS 污染/连接超时（实测直连 HTTP 000，3 次全失败），
+       而备用域名 fastly.jsdelivr.net 却是通的。
+
+       更要命的是：SDK 加载失败会让浏览器干等，页面迟迟不出内容，
+       用户看到的就是"打开是白屏/转圈"，以为网站坏了。
+
+       现在改成：
+         1. **动态插入 script**，依次尝试多个镜像源，谁先通用谁；
+         2. 每个源设 6 秒超时，超时就试下一个；
+         3. **全程不阻塞游戏启动** —— 云 SDK 只影响"异地联机"，
+            单人玩、本地双人玩根本用不到它。SDK 没加载好，
+            游戏照样能进，只是联机按钮会提示不可用。
+       ============================================================ -->
+  <script>
+    window.__CLOUD_SDK_SOURCES = [
+      // 顺序即优先级：国内优先 fastly（实测大陆可达），再退回 jsdelivr 默认，最后 unpkg
+      'https://fastly.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js',
+      'https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js',
+      'https://unpkg.com/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js'
+    ];
+    window.__loadCloudSdk = function (done) {
+      var list = window.__CLOUD_SDK_SOURCES.slice();
+      function tryNext() {
+        if (!list.length) { done(false, '所有镜像源均不可达'); return; }
+        var url = list.shift();
+        var s = document.createElement('script');
+        var settled = false;
+        var timer = setTimeout(function () {
+          if (settled) return;
+          settled = true;
+          s.remove();
+          tryNext();               // 超时 → 换下一个源
+        }, 6000);
+        s.src = url;
+        s.onload = function () {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          done(true, url);
+        };
+        s.onerror = function () {
+          if (settled) return;
+          settled = true;
+          clearTimeout(timer);
+          s.remove();
+          tryNext();
+        };
+        document.head.appendChild(s);
+      }
+      tryNext();
+    };
+  </script>
+
+  <script src="js/cloud-config.js"></script>
+  <script src="js/levels.js"></script>
+  <!-- ★ 🏗 第 13~20 关重构版（2026-10-06）★
+       `ch3-builder.js` —— 语义化关卡构建工具（铺地面/挖坑/放订单…）
+       `levels-ch3.js`  —— 8 个重构后的关卡 + 机制数据
+
+       ⚠️ 必须在 levels.js **之后**：它们要用 levels.js 的
+          blankMap / put / hline / toStrings 等基础工具。
+       ⚠️ levels.js 末尾先注册了**旧的** 13~20 关，然后
+          levels-ch3.js 加载完会调 applyCh3Levels() 把它们**替换**掉。
+          （替换失败就保留旧版 → 任何时候游戏都能玩）
+       ⚠️ 删掉这两个文件 = 退回旧的 13~20 关，其余完全不受影响。 -->
+  <script src="js/ch3-builder.js"></script>
+  <script src="js/levels-ch3.js"></script>
+  <script src="js/levels-ch4.js"></script>
+  <script src="js/sprites.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/physics.js"></script>
+  <!-- ★ 角色配置表（数据驱动）★
+       ⚠️ 必须排在 save.js 之前 —— 存档的兼容逻辑要调 charById() /
+       defaultUnlockedChars() 来补角色字段，顺序反了会读到 undefined。 -->
+  <script src="js/characters.js"></script>
+  <!-- ★ 设备模式（电脑 / 手机）★
+       排在 save.js 之前：存档本身不依赖它，但 UI 尽早拿到模式可以
+       避免"先画出电脑版菜单、再跳成手机版"的闪烁。 -->
+  <script src="js/device-mode.js"></script>
+  <!-- ★ 👤 本机账号系统（2026-10-06 十一要求）★
+       独立模块：账号表（昵称+盐+哈希）、当前登录态、注册/登录/切换/删除。
+       ⚠️ 必须在 save.js **之前** —— 因为 save.js 的 saveKey() 要调
+          ACCOUNT.saveKey() 才知道"这一份进度该写到哪个账号名下"。
+       ⚠️ 它自己**不依赖任何模块**（只碰 localStorage），所以可以单独测。
+       删掉它 = 退回"全机一份存档"的老行为
+       （saveKey() 里有 typeof 兜底，不会崩）。 -->
+  <script src="js/account.js"></script>
+  <!-- ★ 存档（含动作解锁表与 isActionUnlocked）★
+       ⚠️ 必须在 actions.js / game.js 之前 —— 它们都要调 isActionUnlocked
+       判断"这个动作解锁了没"。虽然函数声明会提升、顺序反了也能跑，
+       但那是在依赖提升这种脆弱行为，别这么干。 -->
+  <script src="js/save.js"></script>
+  <!-- ★ 新动作系统（滑墙/墙跳/八方冲刺）★
+       必须在 physics.js 之后（要用里面的 aabb / moveAndCollide），
+       且在 game.js 之前（game.js 的物理循环会调用 ACTIONS.updatePlayer）。 -->
+  <script src="js/actions.js"></script>
+  <!-- ★ 新动作教学引导 ★
+       只被 game.js 单向调用，不依赖任何其它模块，删掉也不影响游玩。 -->
+  <script src="js/tutorial.js"></script>
+  <!-- ★ ⚡ 雷电气象（2026-10-06）★
+       独立模块：state.js 不依赖任何模块，只做"定时预警 + 落雷"。
+       必须排在 render.js / game.js 之前 —— 那两个都要调它
+       （game.js 调 update 推进、render.js 调它取预警圈位置来画）。
+       ⚠️ 伤害是"注入"的（game.js 传 damagePlayer 进来），
+          所以它不反向依赖 game.js，可以单独测。
+       删掉它 = 雷电形态失效，其余天气不受影响。 -->
+  <script src="js/thunder.js"></script>
+  <!-- ★ 🛵 外卖车（2026-10-07 改版：借车加速）★
+       独立模块：进关时按关卡哈希决定"这一关刷不刷外卖车"。
+       ⚠️ 它**唯一影响物理的地方**是"算速度时乘一个系数" ——
+          不改 CONFIG、不改跳跃、不改角色属性（见 scooter.js 顶部说明）。
+       玩法：碰到车 → 借到几秒加速（限时）；车用完（没电）就借不了了。
+       ⚠️ 2026-10-07 十一要求"去掉随机充电桩"，所以充电桩已整体删除，
+          data.chargers 恒为空数组（保留字段只为向后兼容）。
+       必须排在 game.js / render.js **之前**：
+         · game.js 每帧调 SCOOTER.update()、算速度时调 SCOOTER.speedMulFor()
+         · render.js 调 SCOOTER.current() 取车来画、boostRatio() 画倒计时
+       删掉它 = 外卖车消失，其余玩法完全不受影响
+       （所有调用点都有 `typeof SCOOTER !== 'undefined'` 保护）。 -->
+  <script src="js/scooter.js"></script>
+  <!-- ★ 🧍 收餐人朝向 + 台词（2026-10-07 十一要求）★
+       ① 收餐人**朝向骑手**（原来侧身贴图固定朝右 ⇒ 看起来背对玩家）
+       ② 收到外卖后**说 10 秒话**（谢谢 / 怎么这么慢 …）
+       ⚠️ 硬保证：这段说话**绝不阻挡终点**（本作送达即通关，它只是余韵）。
+       必须排在 game.js / render.js 之前（两边都要调）。
+       删掉它 = 收餐人不说话、朝向退回不翻转，其余玩法完全不受影响
+       （调用点都有 `typeof xxx !== 'undefined'` 保护）。 -->
+  <script src="js/receiver-talk.js"></script>
+  <!-- ★ 🌊 第 13~20 关的新机制集合（2026-10-06 重构）★
+       十一要求 13~20 关要有真机制，而不是把旧机关换个摆法。
+       这一个文件装下了：积水打滑 / 周期水柱 / 漏电区 / 移动货柜 /
+       叉车 / 机械门 / 水位潮汐 / 气泡流 / 破裂玻璃 / 水母 / 车流 /
+       断裂路面 / 追车 / 遮棚视线 / 人群 / 可破坏摊位 / 供电节点 /
+       电弧 / 闪电 / 坠落物 / 起重机货台 / 无人机追逐 / 阶段推进。
+
+       ⚠️ 为什么全塞一个文件（而不是拆 10 个）：
+          它们共享同一套「计时器 → 改状态 → 影响物理/渲染」骨架，
+          拆开会复制 10 份几乎一样的推进/重置/查表代码。
+
+       ⚠️ 必须在 game.js / render.js **之前** —— 那两个都要调它。
+       ⚠️ 铁律：它**不改 physics.js、不改 CONFIG、不改角色属性**，
+          只做三件事：给水平速度乘系数、给速度加推力、报告"这里危险"。
+          ⇒ 所以可达性判定（reachability-test）的模型依然成立。
+       ⚠️ 删掉它 = 这些机制全部失效，游戏照常能玩
+          （所有调用点都有 typeof 保护）。 -->
+  <script src="js/ch3-mechanics.js"></script>
+  <!-- ★ 🏁 PK 模式 · AI 骑手（2026-10-06 十一要求）★
+       独立模块：AI 只是"输入源"，走 InputState.aiInput 通道 ——
+       **不碰任何真实键位**（否则会和玩家抢键）。
+       它用同一个 makePlayer、同一套物理，所以不会穿墙、不会作弊。
+       必须排在 game.js 之前（game.js 每帧要调 AI_RIDER.update 产生输入）。
+       删掉它 = PK 模式不可用，单人/双人/联机完全不受影响。 -->
+  <script src="js/ai-rider.js"></script>
+  <!-- ★ 🎨 每关专属背景主题（2026-10-06）★       独立模块：只有一张"区域 → 配色"表 + 两个取值函数，
+       不依赖任何其它模块。
+       必须排在 render.js **之前** —— render.js 的
+       drawSky/drawClouds/drawHills 都要调它取主题色。
+       ⚠️ 删掉它 = render.js 自动退回原来的蓝天白云绿山，
+          功能完全不受影响（有 typeof 保护）。
+       加新关卡时：district 不在表里就自动用默认蓝天，不会崩。 -->
+  <script src="js/bg-theme.js"></script>
+  <!-- ★ 🖌 通用背景绘制器库（2026-10-07 十一要求"彻底重做背景"）★
+       上一层 bg-theme.js 只声明"这一关用什么笔、画在哪、多密"，
+       真正的**画法**都在这里（老城屋顶 / 物流园 / 地下拱顶 / 跨江桥 /
+       夜市摊位 / 海底隧道 / 电网塔 / 塔吊 / 应急站 … 共 24 个 painter）。
+
+       ⚠️ 顺序：必须在 bg-theme.js **之后**、render.js **之前** ——
+          render.js 的 drawLayeredBackground 要同时读这两个。
+       ⚠️ 为什么和 bg-theme 分成两个文件：
+           painter 是**可复用笔刷**，theme 是**每关构图配方**。
+           分开才能做到"复用工具但构图各不相同"。
+           （旧的失败教训：画法和配色写在一起，8 关必然长成一个样。）
+       ⚠️ 删掉它 = render.js 的 hasLayeredBg() 返回 false，
+          自动退回"只换颜色"的旧背景，游戏照常能玩（有 typeof 保护）。 -->
+  <script src="js/bg-draw.js"></script>
+  <script src="js/net.js"></script>
+  <!-- ★ 作者彩蛋素材（2026-10-06）★
+       第 11 关起点那块踏板踩下去显示的微信二维码。
+       文件由 `node tools/make-qr-base64.js` **自动生成**（内嵌 base64，
+       所以单文件版也不依赖外部图片）。
+       ⚠️ 必须在 render.js 之前 —— 渲染层要读 EGG_QR_IMG / EGG_QR_W / EGG_QR_H。
+       ⚠️ 删掉它 = 彩蛋不显示，但游戏照常能玩（渲染层有 typeof 保护）。 -->
+  <script src="js/egg.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/ui.js"></script>
+  <script>
+    /* ============================================================
+     * 启动流程
+     *
+     * ⚠️ 关键：**不要等贴图加载完才开始游戏**。
+     *
+     * 贴图（assets/*.png）只是"锦上添花"——加载失败会自动退回代码绘制的
+     * 像素角色，游戏照样能玩。所以没有任何理由让它拖住启动。
+     *
+     * 踩过的坑：原来写成 loadSpriteImages(function(){ initGame(); ... })，
+     * 结果贴图加载慢（实测线上 kangaroo.png 要 2.3 秒）时，
+     * 整个游戏跟着一起卡在启动阶段；万一图片请求挂住（既不 onload 也不 onerror），
+     * 游戏就永远起不来，玩家看到的是白屏。
+     *
+     * 现在改成：**立刻启动**，贴图在后台加载，好了自然会用上
+     * （drawCharacter 每帧都查 getSpriteImage()，加载完下一帧就换成新贴图，无需重启）。
+     * ============================================================ */
+    var _booted = false;
+    function boot() {
+      if (_booted) return;      // 防止 DOMContentLoaded 和 load 都触发时跑两次
+      _booted = true;
+
+      /* ============================================================
+       * ★ 第 0 步：设备模式（2026-10-07 重新开放，十一要求）★
+       * ============================================================
+       * 【历史】
+       *   2026-10-06 十一要求"暂不开通手机端入口"，于是这里硬锁电脑模式。
+       *   2026-10-07 十一要求"启动手机版制作"，恢复入口。
+       *
+       * 【现在的做法】
+       *   · 只调 `DEVICE.init()` —— **读存档里的选择 + 探测设备**，
+       *     但**不弹选择页**（选择页挪到"点完开始游戏"之后，见 ui.js）。
+       *   · 存档里已选过（`chosen() === true`）→ 直接用玩家上次的选择，
+       *     **不再打扰**（老玩家升级后不该被多问一次）。
+       *   · 没选过 → `init()` 会用探测值当**临时值**（先让页面能跑），
+       *     真正让玩家选在"开始跑单"那一步。
+       *
+       * ⚠️ 为什么不在 boot 里直接弹选择页：
+       *   十一的原话："在一开始点完开始游戏之后，选择手机版或者是电脑版。"
+       *   ⇒ 顺序是 **启动画面 → 主菜单 → 开始跑单 → 【选手机/电脑】 → 选骑手**。
+       * ============================================================ */
+      try {
+        DEVICE.init();
+      } catch (e) {
+        /* 设备模块出问题绝不阻塞游戏 —— 继续用默认的电脑模式 */
+        console.error('[设备模式] 初始化失败，按电脑模式继续：', e);
+      }
+
+      initGame('game');
+      initUI();
+
+      /* ★ 套用"手机按键大小倍率"（2026-10-07 十一要求）★
+       * 必须在 initGame 之后 —— SAVE().settings() 依赖存档模块已加载。
+       * 不套的话，玩家上次把按键调大了，这次打开又变回默认，
+       * 会让人以为"设置没保存"。 */
+      try {
+        if (typeof TouchPad !== 'undefined' && TouchPad.applyScale) TouchPad.applyScale();
+      } catch (e) {
+        console.error('[按键大小] 套用失败（不影响游玩）：', e);
+      }
+
+      /* ★ 把存档里的设置套用上去（音效开关/音量）★
+       * 必须在 initGame 之后 —— SAVE().settings() 依赖存档模块已加载。
+       * 不套用的话，玩家上次"关掉音效"的选择就白存了：
+       * 每次打开游戏又会响。 */
+      try {
+        var st = SAVE().settings();
+        if (st) {
+          if (typeof Sound !== 'undefined') {
+            if (typeof Sound.setEnabled === 'function') {
+              Sound.setEnabled(st.soundOn !== false);
+            }
+            if (typeof Sound.setVolume === 'function') {
+              Sound.setVolume(typeof st.volume === 'number' ? st.volume : 0.7);
+            }
+          }
+        }
+      } catch (e) {
+        console.error('[设置] 套用音效设置失败（不影响游玩）：', e);
+      }
+
+      /* ★ 第一屏：启动画面 ★
+       * 十一要求："打开游戏后先展示包含标题『第十一单外卖』及对应背景图的
+       * 启动画面，玩家点击后方进入『开始跑单／选择路线』界面。"
+       *
+       * 为什么放在这里（而不是 Game 的默认 state）：
+       *   Game.state 的默认值必须是 MENU —— 因为所有"返回主菜单"的
+       *   代码路径都往 MENU 走，如果默认值是 SPLASH，任何一次
+       *   重置都可能莫名其妙弹回启动页。
+       *   只有"本次打开游戏的第一次"才该看到启动画面，
+       *   而这正是 boot() 的语义。 */
+      Game.state = STATE.SPLASH;
+      syncUI();
+      // 状态变化自动切换界面
+      setInterval(syncUI, 100);
+
+      /* ★ 窗口尺寸/朝向变化 → 重算竖屏类 + 手柄显隐 ★
+       * 原来只有 initGame 里的 fit() 在 resize 时更新 portrait 类，
+       * 现在多了一个"手柄显隐"，要在同一处一起刷新。
+       * 用同一个监听器避免两处逻辑打架。 */
+      var onViewportChange = function () {
+        try { TouchPad.syncVisibility(); } catch (e) {}
+      };
+      window.addEventListener('resize', onViewportChange);
+      window.addEventListener('orientationchange', function () {
+        // 旋转后窗口尺寸要等一帧才更新
+        setTimeout(onViewportChange, 120);
+      });
+
+      /* ============================================================
+       * ★★ 2026-10-07 十一反馈①：禁止屏幕缩放 / 双指放大 ★★
+       * ============================================================
+       * 十一原话："进入游戏后，禁止屏幕的放大缩小。"
+       *
+       * 【为什么 viewport 的 user-scalable=no 还不够】
+       *   · iOS Safari **从 iOS 10 起就无视** `user-scalable=no`（无障碍考虑）
+       *   · 安卓部分浏览器也会忽略
+       *   ⇒ 必须**同时用 JS 拦截手势事件**，两手都要抓。
+       *
+       * 【拦哪些】
+       *   ① `gesturestart/change/end` —— iOS 专有的捏合手势
+       *   ② `touchmove` 且 **多指**（`touches.length > 1`）—— 安卓捏合
+       *   ③ `dblclick` —— 双击放大（iOS 的"双击缩放到列宽"）
+       *   ④ Ctrl + 滚轮 —— 桌面浏览器/触控板的缩放
+       *   ⑤ `touchstart` 多指 —— 提前掐掉（有些机型不等 move）
+       *
+       * ⚠️ **不能**全局 `preventDefault` 所有 touchmove ——
+       *    那样页面就完全滚不动了（设置页、角色库都要滚）。
+       *    规则是"**只在多指时拦**"，单指照常。 */
+      (function blockZoom() {
+        var stop = function (e) {
+          if (e && e.cancelable !== false) { try { e.preventDefault(); } catch (err) {} }
+        };
+        /* ★★ 2026-10-07：落在虚拟手柄上的多指**不能拦** ★★
+         * ------------------------------------------------------------
+         * 十一原话："你在按左右的时候不能跳。我希望这些按钮都是可以同时按的。"
+         *
+         * 【为什么这段会挡住"按住◀ + 按跳"】
+         *   下面 ⑤ 那条监听的是 **document 级** 的 touchstart。
+         *   玩家两根手指分别按 ◀ 和 跳 时，第二个 touchstart 事件里
+         *   `e.touches.length` 就是 2 ⇒ 被判成"捏合缩放"直接 preventDefault。
+         *
+         *   现代浏览器上按钮走 PointerEvent，本来不受影响；
+         *   但**不支持 PointerEvent 的老 WebKit** 会退到 touch 分支，
+         *   于是第二根手指的 touchstart 被掐掉 ⇒ "按着方向键就没法跳"。
+         *
+         * 【修法】判断触摸目标是不是虚拟手柄/编辑器里的元素，
+         *   是的话**放行**（手柄自己已经 `touch-action:none` +
+         *   在每个按钮上 preventDefault，不会真的缩放页面）。
+         * ------------------------------------------------------------ */
+        var inPad = function (e) {
+          try {
+            var t = (e.target && e.target.closest) ? e.target.closest('#touchpad, .tp-edit-layer')
+                                                  : null;
+            return !!t;
+          } catch (err) { return false; }
+        };
+        /* ① iOS 捏合手势（Safari 专有事件，不支持时 addEventListener 无副作用） */
+        ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (n) {
+          document.addEventListener(n, stop, { passive: false });
+        });
+        /* ②③ 多指 touchmove / 多指 touchstart（安卓捏合） */
+        document.addEventListener('touchmove', function (e) {
+          if (inPad(e)) return;                  // 手柄上的滑动放行
+          if (e.touches && e.touches.length > 1) stop(e);
+        }, { passive: false });
+        document.addEventListener('touchstart', function (e) {
+          if (inPad(e)) return;                  // ★ 多指同时按手柄放行 ★
+          if (e.touches && e.touches.length > 1) stop(e);
+        }, { passive: false });
+        /* ③ 双击放大：拦 dblclick（部分浏览器用它触发 zoom） */
+        document.addEventListener('dblclick', stop, { passive: false });
+        /* ④ Ctrl/⌘ + 滚轮缩放（桌面浏览器） */
+        window.addEventListener('wheel', function (e) {
+          if (e.ctrlKey || e.metaKey) stop(e);
+        }, { passive: false });
+      })();
+
+      /* ============================================================
+       * ★★ 2026-10-07 新增：按键位置编辑模式的提示条 ★★
+       * ============================================================
+       * 十一要求"自己调按键位置" ⇒ 需要一个明确的"怎么退出"提示。
+       * 这里只做 DOM + 事件：真正的拖拽逻辑在 game.js 的 TouchPad._bindDrag，
+       * 进入/退出由 ui.js 的设置页按钮触发。
+       *
+       * ⚠️ 提示条 `pointer-events: none` —— 绝不能挡住拖动按钮。
+       * ⚠️ 用 CustomEvent 通信（pad-edit-enter / pad-edit-exit），
+       *    而不是让 game.js 直接摸这段 DOM —— 保持"模块各自管自己"。
+       * ============================================================ */
+      (function setupPadEditTip() {
+        var tip = document.createElement('div');
+        tip.id = 'pad-edit-tip';
+        tip.innerHTML = '拖动按钮到顺手的位置　·　松手即保存<br>' +
+                        '<span style="opacity:.75;font-size:13px">调好后点屏幕右下角「完成」退回设置</span>';
+        document.body.appendChild(tip);
+
+        var done = document.createElement('div');
+        done.id = 'pad-edit-done';
+        done.textContent = '完成';
+        done.style.cssText =
+          'position:fixed;right:14px;bottom:14px;z-index:62;display:none;' +
+          'padding:12px 22px;border-radius:12px;font:800 16px/1 inherit;' +
+          'background:rgba(255,209,0,0.9);color:#1a1a1a;cursor:pointer;' +
+          'box-shadow:0 4px 14px rgba(0,0,0,.45);';
+        document.body.appendChild(done);
+
+        var show = function (on) {
+          document.body.classList.toggle('pad-editing', on);
+          done.style.display = on ? 'block' : 'none';
+        };
+        window.addEventListener('pad-edit-enter', function () { show(true); });
+        window.addEventListener('pad-edit-exit', function () { show(false); });
+
+        var finish = function (e) {
+          if (e) { e.preventDefault(); e.stopPropagation(); }
+          if (typeof TouchPad !== 'undefined') TouchPad.exitEditMode();
+          /* 退出后回到设置页（编辑是从设置页进来的） */
+          try {
+            if (typeof gotoState === 'function' && typeof STATE !== 'undefined') {
+              gotoState(STATE.SETTINGS);
+            }
+          } catch (err) { /* 拿不到状态机就只退出编辑，不崩 */ }
+        };
+        if (window.PointerEvent) done.addEventListener('pointerdown', finish, { passive: false });
+        else done.addEventListener('click', finish, { passive: false });
+      })();
+
+      /* ============================================================
+       * ★★ 2026-10-07 十一反馈④：手机键盘弹出时，按钮跟着上移 ★★
+       * ============================================================
+       * 十一原话："进入游戏后，手机键盘弹出来的时候，
+       *           屏幕上的一些按钮可能被键盘挡住，需要让按钮跟着键盘上移。
+       *
+       * 【问题场景】手机软键盘从底部弹出，**只改变 `visualViewport`，
+       *   不改变 `window.innerHeight`** ⇒ 固定在 `bottom: 18px` 的按钮
+       *   会被键盘盖住，玩家点不到。
+       *   （我们的虚拟手柄是 `position: fixed` + `bottom`，正好中招。）
+       *
+       * 【做法】监听 `visualViewport` 的 resize/scroll，算出
+       *   "键盘占了多少高度"，把它写进 CSS 变量 `--kb-inset`；
+       *   CSS 里手柄 `bottom` 加上这个值即可。
+       *
+       * 【降级】不支持 visualViewport 的旧浏览器 —— 什么都不做，
+       *   行为退回改之前（不崩）。 */
+      (function adaptToKeyboard() {
+        var vv = window.visualViewport;
+        if (!vv) return;                    // 老浏览器：跳过
+        var apply = function () {
+          /* 键盘高度 = 布局视口高 - 可视视口高 - 可视视口在布局中的偏移
+           * ⚠️ 必须减去 `offsetTop`，否则页面被顶上去时会把
+           *    "偏移量"误判成"键盘高度"，按钮会莫名其妙地飞高。 */
+          var kb = window.innerHeight - vv.height - vv.offsetTop;
+          if (!isFinite(kb) || kb < 0) kb = 0;
+          /* 小于 60px 的多半是地址栏收缩，不是键盘 —— 忽略，
+           * 否则浏览器一动地址栏按钮就抖一下。 */
+          if (kb < 60) kb = 0;
+          var px = Math.round(kb) + 'px';
+          /* ⚠️ **必须写到 `#touchpad` 元素上**，不能写 documentElement！
+           * ------------------------------------------------------------
+           * CSS 变量有"就近作用域"规则：`#touchpad` 的 CSS 里
+           * 已经声明了 `--kb-inset: 0px`，那就在**这个元素**上定了值。
+           * 如果只写 documentElement，`#touchpad` 上的声明会**覆盖**它
+           * ⇒ 实测"上移量 = 0"（按钮纹丝不动）。
+           * （2026-10-07 踩过：两个地方都写才生效。）
+           * ------------------------------------------------------------ */
+          var tp = document.getElementById('touchpad');
+          if (tp) tp.style.setProperty('--kb-inset', px);
+          /* 顺带写一份到 documentElement —— 方便以后别的 fixed 元素
+           * （比如输入框提示条）也复用同一个键盘高度。 */
+          document.documentElement.style.setProperty('--kb-inset', px);
+        };
+        vv.addEventListener('resize', apply);
+        vv.addEventListener('scroll', apply);
+        apply();
+      })();
+
+      // 贴图后台加载：先让游戏跑起来，图片好了下一帧自动生效
+      try {
+        loadSpriteImages(function () {
+          // 加载完（或失败）什么都不用做，drawCharacter 会自己用上
+        });
+      } catch (e) { /* 贴图模块异常也不该影响游戏 */ }
+
+      /* ★ 装饰图也要加载（2026-10-06）★
+       * 收餐人 / 外卖车（充电桩已删）。
+       * ⚠️ 三条原则和角色贴图一致：
+       *   ① **后台加载**，绝不阻塞启动
+       *   ② 加载失败/超时**优雅降级**（收餐人退回代码画的抽象小人）
+       *   ③ 整个 try 包住 —— 装饰图模块炸了也不许影响能玩游戏 */
+      try {
+        loadDecorImages(function () { /* 同上，加载完什么都不用做 */ });
+      } catch (e) { /* 装饰图失败不影响游戏 */ }
+
+      /* ============================================================
+       * 云服务：**异步加载，绝不阻塞游戏**
+       *
+       * 顺序很重要：initCloud 必须在 SDK 真正就绪之后调用，
+       * 否则 window.WorkBuddyCloud 还是 undefined，联机直接报废。
+       * 所以把它放进 SDK 加载的回调里。
+       * ============================================================ */
+      var el = document.getElementById('net-status');
+      if (typeof window.__loadCloudSdk === 'function') {
+        window.__loadCloudSdk(function (ok, info) {
+          if (ok) {
+            var cloudOk = initCloud(window.CLOUD_CONFIG);
+            if (!cloudOk && el) {
+              el.textContent = '联机不可用：' + (Net.lastError || '未知');
+              el.style.color = 'rgba(255,180,120,0.7)';
+              setTimeout(function () { el.textContent = ''; }, 4000);
+            }
+          } else {
+            // SDK 一个源都连不上 —— 只影响联机，不影响游玩
+            Net.lastError = '云 SDK 加载失败（' + info + '），联机不可用';
+            if (el) {
+              el.textContent = '联机不可用（网络受限），单人/本地双人可正常游玩';
+              el.style.color = 'rgba(255,180,120,0.7)';
+              setTimeout(function () { el.textContent = ''; }, 6000);
+            }
+          }
+        });
+      } else {
+        // 极端兜底：加载器脚本本身没跑起来
+        try { initCloud(window.CLOUD_CONFIG); } catch (e) {}
+      }
+    }
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      boot();
+    } else {
+      window.addEventListener('DOMContentLoaded', boot);
+      // 双保险：万一 DOMContentLoaded 因为某种原因没触发，load 事件兜底（boot 内部会去重）
+      window.addEventListener('load', boot);
+    }
+  </script>
+</body>
+</html>

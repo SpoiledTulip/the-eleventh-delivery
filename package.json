@@ -1,0 +1,49 @@
+{
+  "name": "delivery-game",
+  "version": "1.0.0",
+  "description": "第十一单外卖 —— 2D 横版平台跳跃/配送游戏（美团袋鼠 × 奶龙），当前专注单人模式",
+  "private": true,
+  "license": "UNLICENSED",
+  "//": "════════════════════════════════════════════════════════════",
+  "//1": "项目结构：",
+  "//2": "  src/    ← 源码（index.html + js/ + assets/），改代码看这里",
+  "//3": "  tests/  ← 自动测试（Node 层 + 真浏览器层）",
+  "//4": "  tools/  ← 构建/打包脚本",
+  "//5": "  dist/   ← 单文件发布版（由 tools/build-single.js 生成，不要手改）",
+  "//6": "  docs/   ← 文档",
+  "//7": "════════════════════════════════════════════════════════════",
+  "//deps": "游戏本体是纯原生 JS + Canvas，运行时零依赖。only devDependencies 里的包是给浏览器自动化测试用的，不装也能玩。",
+  "devDependencies": {
+    "chrome-remote-interface": "^0.33.0"
+  },
+  "scripts": {
+    "//": "──── 构建 ────",
+    "build": "node tools/build-single.js",
+    "//2": "──── 测试：Node 层（不需要 Chrome，最快）────",
+    "test": "node tests/unlock-test.js && node tests/tutorial-test.js && node tests/celeste-test.js && node tests/input-isolation-test.js && node tests/doublejump-test.js && node tests/reachability-test.js && node tests/mover-connectivity-test.js && node tests/jump-test.js && node tests/playtest.js && node tests/level-flow-test.js && node tests/level2-test.js && node tests/level3-test.js && node tests/level4-test.js && node tests/mechanics-test.js && node tests/mechanics2-test.js && node tests/coin-test.js && node tools/check-coins-all.js && node tests/thunder-test.js && node tests/weather-physics-test.js && node tests/capybara-role-test.js && node tests/capybara-jump-test.js && node tests/stitch-role-test.js && node tests/new-roles-test.js && node tests/nick-judy-test.js && node tests/pinkiepie-test.js && node tests/role-motion-test.js && node tests/role-eleven-test.js && node tests/role-lulu-test.js && node tests/save-test.js && node tests/account-core-test.js && node tests/achievement-test.js && node tests/scooter-test.js && node tests/receiver-talk-test.js && node tests/ai-pk-test.js && node tests/single-player-test.js && node tests/ch3-levels-test.js && node tests/ch3-bg-test.js && node tests/ch3-pressure-test.js && node tests/sprite-check.js && node tests/sprite-role-test.js && node tests/monkey-role-test.js && node tests/charpick-test.js",
+    "//3": "──── 测试：真浏览器层（需要本机装 Chrome）────",
+    "test:browser": "node tests/real-browser-test.js && node tests/celeste-browser-test.js && node tests/help-page-test.js && node tests/unlock-browser-test.js && node tests/single-player-browser-test.js",
+    "test:mobile": "node tests/mobile-test.js && node tests/coop-interp-test.js",
+    "test:singlefile": "node tests/single-file-test.js",
+    "test:coop": "node tests/coop-test.js",
+    "//4": "──── 全部测试 ────",
+    "test:all": "npm run test && npm run test:browser && npm run test:mobile && npm run test:singlefile",
+    "//4b": "──── 单人模式改造专项（本轮改动的回归）────",
+    "test:pk": "node tests/pk-flow-test.js && node tests/pk-skin-test.js && node tests/pk-tag-test.js",
+    "test:single": "node tests/single-player-test.js && node tests/single-player-browser-test.js",
+    "//4c": "──── 第 11 关作者彩蛋（真浏览器，含二维码渲染校验）────",
+    "test:egg": "node tests/egg-test.js",
+    "//5": "──── 本地开发服务器（起在 src/ 上，改完刷新页面即可）────",
+    "serve": "node tools/serve.js",
+    "test:roles": "node tests/capybara-role-test.js && node tests/stitch-role-test.js && node tests/monkey-role-test.js && node tests/monkey-browser-test.js",
+    "test:account": "node tests/account-core-test.js && node tests/account-save-test.js && node tests/account-test.js && node tests/account-delete-test.js && node tests/author-account-test.js",
+    "test:ch3": "node tests/ch3-levels-test.js && node tests/ch3-bg-test.js && node tests/ch3-pressure-test.js && node tests/ch3-browser-test.js",
+    "//4d": "──── 🛵 外卖车借车加速（离线 + 真浏览器）────",
+    "test:scooter": "node tests/scooter-test.js && node tools/_scooter-browser.js",
+    "//4e": "──── 🧍 收餐人朝向 + 台词（离线 + 真浏览器）────",
+    "test:receiver": "node tests/receiver-talk-test.js && node tools/_receiver-browser.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
